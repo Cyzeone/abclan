@@ -299,3 +299,11 @@ document.addEventListener('DOMContentLoaded', () => {
       menu.style.display = 'none';
     }
   });
+
+// Abre/fecha o menu mobile ao clicar no hamburguer
+if (hamburguer && navMenu) {
+    hamburguer.addEventListener('click', () => {
+        hamburguer.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
