@@ -255,9 +255,21 @@
     </footer>
 
     <!-- Whatsapp Botão -->
-    <a href="https://wa.me/5511940272784" class="whatsapp-btn" target="_blank" aria-label="Whatsapp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <div class="whatsapp-container">
+        <a class="whatsapp-btn" id="whatsappToggle" aria-label="Abrir opções de WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <div class="whatsapp-menu" id="whatsappMenu">
+            <a href="https://wa.me/5511940272784" target="_blank">📞 Suporte</a>
+            <a href="https://wa.me/5511940752234" target="_blank">📞 Comercial</a>
+        </div>
+    </div>
+
+    <!-- Modal para Zoom -->
+    <div id="zoom-modal" class="zoom-modal">
+        <span class="close-modal">&times;</span>
+        <img class="zoom-modal-content" id="zoom-image">
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

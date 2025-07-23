@@ -287,7 +287,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Hamburguer: abre/fecha menu
-document.querySelector('.hamburguer').addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    hamburguer.classList.toggle('active');
-});
+  const toggle = document.getElementById('whatsappToggle');
+  const menu = document.getElementById('whatsappMenu');
+
+  toggle.addEventListener('click', () => {
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+      menu.style.display = 'none';
+    }
+  });
