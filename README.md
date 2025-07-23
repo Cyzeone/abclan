@@ -16,7 +16,7 @@ Este é o código fonte do website institucional desenvolvido para a ABCLAN. O s
 - GitHub Pages para hospedagem gratuita
 
 ### Como visualizar:
-Acesse a página publicada em [link do GitHub Pages]
+Acesse a página publicada em (https://cyzeone.github.io/abclan/index.html)
 
 ---
 
