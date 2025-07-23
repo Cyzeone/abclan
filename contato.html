@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ABCLAN - Distribuidora de materiais de cabeamento estruturado, telecom, CFTV e informática. Tecnologia de ponta para redes seguras e eficientes.">
+    <meta name="keywords" content="cabeamento estruturado, telecom, CFTV, informática, redes, tecnologia, Santo André">
+    <title>ABCLAN - Tecnologia de ponta para redes seguras e eficientes</title>
+
+    <!-- Fontes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Fontes Awesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link do CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Link do Choices -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+
+    <!-- Favicon (logo no título )-->
+    <link rel="icon" href="images/abclanlogotranspfavicon.png" type="image/png">
+
+    <!-- Swiper CSS (images slide) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-info">
+                    <div class="contact-info">
+                        <span><i class="fas fa-phone"></i> (11) 4477-2277</span>
+                        <span><i class="fas fa-envelope"></i> comercial@abclan.com.br</span>
+                        <span><i class="fas fa-clock"></i> Segunda à Sexta - 8h30 às 18h</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="index.html"><img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img"></a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
+                    <li class="has-submenu">
+                        <div class="submenu-toggle-wrapper">
+                            <a href="index.html#servicos" class="nav-link">Produtos</a>
+                            <span class="submenu-toggle">&#9662;</span> <!-- Setinha ▼ -->
+                        </div>
+                        <ul class="submenu">
+                            <li><a href="cabeamentometalico.html" class="nav-link">Cabeamento Metálico</a></li>
+                            <li><a href="cabos.html" class="nav-link">Cabeamento Óptico</a></li>
+                            <li><a href="ativos.html" class="nav-link">Ativos</a></li>
+                            <li><a href="racks.html" class="nav-link">Racks e Acessórios</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="contato.html" class="nav-link">Contato</a></li>
+                    <li><a href="solicitarorcamento.html" class="nav-link btn-orcamento">Orçamento</a></li>
+                </ul>
+
+                <div class="hamburguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Estamos prontos para atender suas necessidades</p>
+            </div>
+
+            <div class="contato-content">
+                <div class="contato-info">
+                    <h3 class="subtitle-contato">Informações de Contato</h3>
+
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Av. Utinga, 1586 - Utinga<br>CEP: 09220-611 - Santo André - SP</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefones</h4>
+                            <p>(11) 4477-2277<br>(11) 94027-2784</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>E-mails</h4>
+                            <p>comercial@abclan.com.br<br>abclantelecom@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Segunda a Sexta: 8h30 às 18h<br>Sábado e Domingo: Fechado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contato-form">
+                    <h3>Envie uma Mensagem</h3>
+                    <form action="linkar emails" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" id="telefone" name="telefone" placeholder="Seu Telefone" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                        </div>
+
+                        <div class="form-group select-wrapper">
+                            <select id="assunto" name="assunto" required>
+                                <option value="" disabled selected hidden>Selecione sua opção</option>
+                                <option value="cabeamento">Financeiro</option>
+                                <option value="telecom">Dúvidas</option>
+                                <option value="orcamento">Solicitação de Orçamento</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="mensagem" name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img-footer">
+                    <p>Tecnologia de ponta para redes seguras e eficientes.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Produtos</h4>
+                    <ul>
+                        <li><a href="cabeamentometalico.html">Cabeamento Metálico</a></li>
+                        <li><a href="cabos.html">Cabeamento Óptico</a></li>
+                        <li><a href="ativos.html">Ativos</a></li>
+                        <li><a href="racks.html">Racks e Acessórios</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (11) 4477-2277</li>
+                        <li><i class="fab fa-whatsapp"></i> (11) 94027-2784</li>
+                        <li><i class="fas fa-envelope"></i> comercial@abclan.com.br</li>
+                        <li><i class="fas fa-envelope"></i> abclantelecom@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i><u>
+                            <a href="https://www.google.com/maps/place/Av.+Utinga,+1586+-+Utinga,+Santo+André+-+SP,+09220-611" target="_blank" rel="noopener"> Av. Utinga, 1586 - Utinga, Santo André - SP</u></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Horário</h4>
+                    <ul>
+                        <li>Segunda à Sexta - 8h30 às 18h</li>
+                        <li>Sábado e Domingo - Fechado</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 ABCLAN. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Whatsapp Botão -->
+    <a href="https://wa.me/5511940272784" class="whatsapp-btn" target="_blank" aria-label="Whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js" defer></script>
+
+</body>
+</html>
