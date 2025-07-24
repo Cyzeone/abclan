@@ -849,6 +849,7 @@ h1, h2, h3, h4, h5, h6 {
 .contato {
     padding: 100px 0;
     padding-top: 180px;
+    background: #f7fafc;
 }
 
 .contato-content {
@@ -908,11 +909,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contato-form {
-    background: #f7fafc;
     padding: 40px;
     border-radius: 15px;
     /* Remove o margin-top para alinhar com o topo do .contato-info */
     margin-top: 0; 
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .contato-form h3 {
@@ -920,6 +922,12 @@ h1, h2, h3, h4, h5, h6 {
     color: #1a365d;
     margin-bottom: 30px;
 }
+
+.contato-form button {
+    display: block;
+    margin: 30px auto 0 auto; /* margem opcional no topo, centraliza no eixo X */
+}
+
 
 /* Forms */
 .form-group {
@@ -1238,8 +1246,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .contato-form {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+        max-width: 100%;
+        padding: 30px 10px; /* margem interna bem pequena nas laterais */
+        margin: 0 1.1.5px; /* opcional: uma leve margem externa pra não colar 100% */
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     }
 
     .contato-form h3 {

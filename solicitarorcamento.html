@@ -94,26 +94,26 @@
                 <form id="budgetForm">
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="text" id="empresa" name="empresa" placeholder="Nome da Empresa" required>
+                            <input type="text" id="empresa" name="empresa" placeholder="Nome da Empresa" required autocomplete="organization">
                         </div>
 
                         <div class="form-group">
-                            <input type="text" id="responsavel" name="responsavel" placeholder="Nome do Responsável" required>
+                            <input type="text" id="responsavel" name="responsavel" placeholder="Nome do Responsável" required autocomplete="name">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="email" id="emailOrcamento" name="email" placeholder="E-mail para Contato" required>
+                            <input type="email" id="emailOrcamento" name="email" placeholder="E-mail para Contato" required autocomplete="email">
                         </div>
 
                         <div class="form-group">
-                            <input type="tel" id="telefoneOrcamento" name="telefone" placeholder="Telefone para Contato" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                            <input type="tel" id="telefoneOrcamento" name="telefone" placeholder="Telefone para Contato" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required autocomplete="tel">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <textarea id="descricaoProjeto" name="descricao" placeholder="Descreva seu projeto ou necessidade" rows="6" required></textarea>
+                        <textarea id="descricaoProjeto" name="descricao" placeholder="Descreva seu projeto ou necessidade" rows="6" required autocomplete="off"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Solicitar Orçamento</button>
