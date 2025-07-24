@@ -293,157 +293,157 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero {
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-swiper {
-  height: 100vh;
+    height: 100vh;
 }
 
 .hero-slide-content {
-  position: relative;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
 }
 
 .hero-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(26, 54, 93, 0.4);
-  z-index: 1;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(26, 54, 93, 0.4);
+    z-index: 1;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.1;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.1;
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  opacity: 0.9;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .btn {
-  display: inline-block;
-  padding: 15px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .btn-primary {
-  background: #ff6b35;
-  color: #fff;
+    background: #ff6b35;
+    color: #fff;
 }
 
 .btn-primary:hover {
-  background: #e55a2b;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
 }
 
 .btn-secondary {
-  background: transparent;
-  color: #fff;
-  border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
 }
 
 .btn-secondary:hover {
-  background: #fff;
-  color: #1a365d;
+    background: #fff;
+    color: #1a365d;
 }
 
 /* Botões das setas - circulares e centralizados */
 .swiper-button-prev,
 .swiper-button-next {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 0;
-  position: absolute; /* importante para aparecer */
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0;
+    position: absolute; /* importante para aparecer */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
 }
 
 .swiper-button-prev {
-  left: 10px; /* Ajuste a distância da esquerda */
+    left: 10px; /* Ajuste a distância da esquerda */
 }
 
 .swiper-button-next {
-  right: 10px; /* Ajuste a distância da direita */
+    right: 10px; /* Ajuste a distância da direita */
 }
 
 /* Remover ícone padrão do Swiper */
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  display: none;
+    display: none;
 }
 
 /* Estilo do SVG (seta) dentro do botão */
 .swiper-button-prev svg,
 .swiper-button-next svg {
-  width: 16px;
-  height: 16px;
-  stroke: #aaa;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  display: block;
-  user-select: none;
+    width: 16px;
+    height: 16px;
+    stroke: #aaa;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    display: block;
+    user-select: none;
 }
 
 /* Indicadores (bolinhas) */
 .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background: rgba(255, 255, 255, 0.6);
-  opacity: 1;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.3s;
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .swiper-pagination-bullet-active {
-  background: #ff6b35; /* Laranja ativo */
+    background: #ff6b35; /* Laranja ativo */
 }
 
 /* Overlay */
@@ -525,7 +525,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary,
 .btn-secondary:focus {
-  outline: none !important;
+    outline: none !important;
 }
 
 /* Sections */
@@ -785,64 +785,64 @@ h1, h2, h3, h4, h5, h6 {
 /* setas */
 .marcas-prev,
 .marcas-next {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  padding: 0;
-  position: absolute;
-  top: 63.5%; /* Ajuste conforme o alinhamento desejado */
-  transform: translateY(-50%);
-  z-index: 10;
-  cursor: pointer;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  opacity: 1;
-  visibility: visible;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0;
+    position: absolute;
+    top: 63.5%; /* Ajuste conforme o alinhamento desejado */
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Posição das setas */
 .marcas-prev {
-  left: 0px;
+    left: 0px;
 }
 
 .marcas-next {
-  right: 0px;
+    right: 0px;
 }
 
 /* Remove conteúdo padrão do Swiper */
 .marcas-prev::after,
 .marcas-next::after {
-  display: none;
+    display: none;
 }
 
 /* Estilo do SVG */
 .marcas-prev svg,
 .marcas-next svg {
-  width: 22px;
-  height: 22px;
-  stroke: #aaa;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  display: block;
-  user-select: none;
+    width: 22px;
+    height: 22px;
+    stroke: #aaa;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    display: block;
+    user-select: none;
 }
 
 /* Quando ocultar seta */
 .marcas-prev.hidden,
 .marcas-next.hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 
 /* Contêiner das setas para posicionar */
 .marcas-swiper {
-  position: relative; /* importante pra posicionar as setas dentro dela */
+    position: relative; /* importante pra posicionar as setas dentro dela */
 }
 
 /* Contato */
@@ -982,7 +982,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary,
 .btn-secondary:focus {
-  outline: none !important;
+    outline: none !important;
 }
 
 /* Footer */
@@ -1071,69 +1071,69 @@ h1, h2, h3, h4, h5, h6 {
 /* WhatsApp Button */
 /* CONTÊINER FIXO */
 .whatsapp-container {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 1000;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
 }
 
 /* BOTÃO VERDE PADRÃO */
 .whatsapp-btn {
-  width: 60px;
-  height: 60px;
-  background: #25d366;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 1.8rem;
-  text-decoration: none;
-  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-  transition: all 0.3s ease;
-  border: none;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.8rem;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    border: none;
 }
 
 /* HOVER SUAVE */
 .whatsapp-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
 }
 
 /* REMOVE FUNDO AZUL DE CLIQUE EM ALGUNS NAVEGADORES */
 .whatsapp-btn:focus,
 .whatsapp-btn:active {
-  outline: none;
-  background: #25d366;
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+    outline: none;
+    background: #25d366;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
 }
 
 /* MENU OCULTO */
 .whatsapp-menu {
-  display: none;
-  position: absolute;
-  bottom: 70px;
-  right: 0;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  flex-direction: column;
-  overflow: hidden;
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    overflow: hidden;
 }
 
 /* LINKS DO MENU */
 .whatsapp-menu a {
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  background: #fff;
-  transition: background 0.2s;
-  white-space: nowrap;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    background: #fff;
+    transition: background 0.2s;
+    white-space: nowrap;
 }
 
 .whatsapp-menu a:hover {
-  background: #f1f1f1;
+    background: #f1f1f1;
 }
 
 /* Container precisa ser position: relative */
