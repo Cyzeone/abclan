@@ -1674,3 +1674,46 @@ a:focus {
 .ler-mais:focus {
     outline: none !important;
 }
+
+/* TESTE DE RESPONSIVIDADE MOBILE PARA DESKTOP */
+/* Evita que o site tenha rolagem lateral em modo desktop forçado no mobile */
+body {
+  overflow-x: hidden;
+}
+
+/* Garante que todos os containers respeitem a largura da tela */
+.container {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+/* Ajustes no footer para garantir responsividade */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px 20px;
+  background: #1a365d;
+  color: white;
+}
+
+footer .footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+/* Evita quebras feias em telas menores mesmo com desktop forçado */
+@media screen and (max-width: 991px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .footer-column {
+    min-width: unset;
+  }
+}
