@@ -2096,7 +2096,151 @@ footer .footer-column {
 /* 900px até 1199px        */
 /* ======================== */
 @media (min-width: 900px) and (max-width: 1199px) {
-    /* Seus estilos para tablets grandes e notebooks pequenos aqui */
+    .header-top,
+    .contact-info {
+        display: flex;
+    }
+
+    .header-info {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        gap: 0;
+    }
+
+    .hamburguer {
+        display: none;
+    }
+
+    .nav-menu {
+        position: static;
+        flex-direction: row;
+        padding: 0;
+        box-shadow: none;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        gap: 25px;
+    }
+
+    .nav-menu .submenu {
+        position: absolute;
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: none;
+        padding: 15px;
+        margin-top: 10px;
+        z-index: 999;
+    }
+
+    .nav-menu li.has-submenu:hover > .submenu {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .logo-img {
+        max-height: 60px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .section-title {
+        font-size: 2.3rem;
+    }
+
+    .sobre-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .sobre-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .marcas-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .marcas-arrow {
+        display: flex;
+    }
+
+    .marcas-prev,
+    .marcas-next {
+        top: 50%;
+    }
+
+    .contato-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .orcamento-form {
+        padding: 40px;
+    }
+
+    .contato-form {
+        padding: 40px;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .btn-primary {
+        margin: 30px 0 0 auto;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        text-align: left;
+    }
+
+    .footer-social {
+        justify-content: flex-start;
+        margin-top: 25px;
+    }
+
+    .whatsapp-btn,
+    .whatsapp-container {
+        bottom: 25px;
+        right: 25px;
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .whatsapp-menu {
+        bottom: 70px;
+    }
 }
 
 
