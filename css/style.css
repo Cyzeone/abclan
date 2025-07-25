@@ -1408,8 +1408,239 @@ footer .footer-column {
     min-width: 200px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* ======================== */
+/* TELAS MUITO PEQUENAS    */
+/* 300px até 499px         */
+/* ======================== */
+@media (min-width: 300px) and (max-width: 499px) {
+    .header-top,
+    .contact-info {
+        display: none;
+    }
+
+    .header-info {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .hamburguer {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        gap: 20px;
+        z-index: 999;
+    }
+
+    .nav-menu .submenu {
+        position: static;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .logo-img {
+        max-height: 45px;
+    }
+
+    .hamburguer.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburguer.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .has-submenu .submenu {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        padding-left: 15px;
+        gap: 10px;
+    }
+
+    .has-submenu.open .submenu {
+        display: flex;
+    }
+
+    .nav-menu li.has-submenu:hover > .submenu {
+        display: none !important;
+    }
+
+    .sobre-text h3,
+    .sobre-text p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contato-info {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .subtitle-contato,
+    .contato-form h3 {
+        text-align: center !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: block;
+        width: 100%;
+    }
+
+    .contato-form {
+        max-width: 100%;
+        padding: 30px 10px;
+        margin: 0 15px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-primary {
+        display: block;
+        margin: 20px auto 0 auto;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .sobre-content,
+    .sobre-stats,
+    .contato-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .marcas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .marcas-arrow {
+        display: none;
+    }
+
+    .marcas-prev,
+    .marcas-next {
+        top: 66%;
+    }
+
+    .form-row {
+        display: block;
+        grid-template-columns: 1fr;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .form-row .form-group:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .orcamento-form {
+        padding: 30px 15px;
+    }
+
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-section h4 {
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .whatsapp-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .whatsapp-container {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-menu {
+        bottom: 60px;
+    }
+}
+
+
+/* ======================== */
+/* SMARTPHONES MEDIANOS    */
+/* 500px até 699px         */
+/* ======================== */
+@media (min-width: 500px) and (max-width: 699px) {
+    /* Seus estilos para celulares médios aqui */
+}
+
+
+/* ======================== */
+/* SMARTPHONES GRANDES e   */
+/* TABLETS PEQUENOS        */
+/* 700px até 899px         */
+/* ======================== */
+@media (min-width: 700px) and (max-width: 899px) {
     .header-top {
         display: none;
     }
@@ -1648,6 +1879,26 @@ footer .footer-column {
         bottom: 60px;
     }
 }
+
+
+/* ======================== */
+/* TABLETS GRANDES E       */
+/* NOTEBOOKS PEQUENOS      */
+/* 900px até 1199px        */
+/* ======================== */
+@media (min-width: 900px) and (max-width: 1199px) {
+    /* Seus estilos para tablets grandes e notebooks pequenos aqui */
+}
+
+
+/* ======================== */
+/* DESKTOPS GRANDES         */
+/* 1200px pra cima         */
+/* ======================== */
+@media (min-width: 1200px) {
+    /* Seus estilos para telas grandes, desktops e monitores maiores */
+}
+
 
 @media (max-width: 480px) {
     .container {
