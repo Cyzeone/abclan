@@ -2249,7 +2249,174 @@ footer .footer-column {
 /* 1200px pra cima         */
 /* ======================== */
 @media (min-width: 1200px) {
-    /* Seus estilos para telas grandes, desktops e monitores maiores */
+    .header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contact-info {
+        display: flex;
+        gap: 20px;
+    }
+
+    .header-info {
+        flex-direction: row;
+        text-align: left;
+        gap: 30px;
+    }
+
+    .hamburguer {
+        display: none;
+    }
+
+    .nav-menu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        flex-direction: row;
+        gap: 30px;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .nav-menu .submenu {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        z-index: 1000;
+    }
+
+    .nav-menu li.has-submenu:hover > .submenu {
+        display: flex !important;
+    }
+
+    .logo-img {
+        max-height: 60px;
+    }
+
+    .sobre-text h3,
+    .sobre-text p,
+    .subtitle-contato,
+    .contato-form h3 {
+        text-align: left !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .contato-info {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .contato-form {
+        max-width: 100%;
+        padding: 50px 40px;
+        margin: 0 auto;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-primary {
+        display: inline-block;
+        margin: 20px 0 0 auto;
+        text-align: right;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .sobre-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+
+    .sobre-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .servicos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .marcas-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .marcas-arrow {
+        display: flex;
+    }
+
+    .contato-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .orcamento-form {
+        padding: 50px;
+    }
+
+    .footer-social {
+        justify-content: flex-start;
+        margin: 0;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        text-align: left;
+    }
+
+    .footer-section h4 {
+        text-align: left;
+    }
+
+    .whatsapp-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .whatsapp-container {
+        bottom: 30px;
+        right: 30px;
+    }
+
+    .whatsapp-menu {
+        bottom: 80px;
+    }
 }
 
 
