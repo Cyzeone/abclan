@@ -1068,6 +1068,12 @@ h1, h2, h3, h4, h5, h6 {
     color: #cbd5e0;
 }
 
+.orcamento-form button {
+    display: block;
+    margin: 30px auto 0 auto; /* margem opcional no topo, centraliza no eixo X */
+}
+
+
 /* WhatsApp Button */
 /* CONTÊINER FIXO */
 .whatsapp-container {
@@ -1092,6 +1098,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
     transition: all 0.3s ease;
     border: none;
+    cursor: pointer;
 }
 
 /* HOVER SUAVE */
@@ -1518,7 +1525,7 @@ footer .footer-column {
     .contato-form {
         max-width: 100%;
         padding: 30px 10px;
-        margin: 0 15px;
+        margin: 0 1.1.5px;
         border-radius: 12px;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     }
@@ -1547,10 +1554,14 @@ footer .footer-column {
     }
 
     .sobre-content,
-    .sobre-stats,
     .contato-content {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 40px;
+    }
+
+    .sobre-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .servicos-grid {
@@ -1567,7 +1578,7 @@ footer .footer-column {
 
     .marcas-prev,
     .marcas-next {
-        top: 66%;
+        top: 63%;
     }
 
     .form-row {
@@ -1585,7 +1596,7 @@ footer .footer-column {
     }
 
     .orcamento-form {
-        padding: 30px 15px;
+        padding: 30px 20px;
     }
 
     .footer-social {
@@ -1638,7 +1649,7 @@ footer .footer-column {
 
     .header-info {
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
         text-align: center;
     }
 
@@ -1657,13 +1668,13 @@ footer .footer-column {
         right: 0;
         background: #fff;
         flex-direction: column;
-        padding: 25px;
+        padding: 20px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
-        gap: 22px;
+        gap: 20px;
         z-index: 999;
     }
 
@@ -1681,7 +1692,7 @@ footer .footer-column {
     }
 
     .logo-img {
-        max-height: 50px;
+        max-height: 45px;
     }
 
     .hamburguer.active span:nth-child(1) {
@@ -1701,7 +1712,7 @@ footer .footer-column {
         flex-direction: column;
         background: #fff;
         padding-left: 15px;
-        gap: 12px;
+        gap: 10px;
     }
 
     .has-submenu.open .submenu {
@@ -1735,15 +1746,15 @@ footer .footer-column {
 
     .contato-form {
         max-width: 100%;
-        padding: 30px 25px;
-        margin: 0 20px;
+        padding: 30px 10px;
+        margin: 0 1.1.5px;
         border-radius: 12px;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     }
 
     .btn-primary {
         display: block;
-        margin: 25px auto 0 auto;
+        margin: 20px auto 0 auto;
         text-align: center;
     }
 
@@ -1765,10 +1776,14 @@ footer .footer-column {
     }
 
     .sobre-content,
-    .sobre-stats,
     .contato-content {
         grid-template-columns: 1fr;
-        gap: 35px;
+        gap: 40px;
+    }
+
+    .sobre-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .servicos-grid {
@@ -1785,7 +1800,7 @@ footer .footer-column {
 
     .marcas-prev,
     .marcas-next {
-        top: 64%;
+        top: 63.5%;
     }
 
     .form-row {
@@ -1803,7 +1818,7 @@ footer .footer-column {
     }
 
     .orcamento-form {
-        padding: 30px 25px;
+        padding: 30px 20px;
     }
 
     .footer-social {
@@ -1828,9 +1843,9 @@ footer .footer-column {
     .whatsapp-btn {
         bottom: 20px;
         right: 20px;
-        width: 55px;
-        height: 55px;
-        font-size: 1.6rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
     }
 
     .whatsapp-container {
@@ -1839,7 +1854,7 @@ footer .footer-column {
     }
 
     .whatsapp-menu {
-        bottom: 65px;
+        bottom: 60px;
     }
 }
 
@@ -1903,7 +1918,7 @@ footer .footer-column {
     }
 
     .logo-img {
-        max-height: 45px;
+        max-height: px;
     }
 
     .hamburguer.active span:nth-child(1) {
@@ -2020,7 +2035,7 @@ footer .footer-column {
 
     .marcas-prev,
     .marcas-next {
-        top: 66%;
+        top: 64%;
     }
 
     .contato-content {
@@ -2098,15 +2113,13 @@ footer .footer-column {
 @media (min-width: 900px) and (max-width: 1199px) {
     .header-top,
     .contact-info {
-        display: flex;
+        display: none;
     }
 
     .header-info {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-        gap: 0;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
     }
 
     .hamburguer {
@@ -2134,9 +2147,21 @@ footer .footer-column {
         z-index: 999;
     }
 
-    .nav-menu li.has-submenu:hover > .submenu {
-        display: flex !important;
+    .has-submenu .submenu {
+        display: none;
         flex-direction: column;
+        background: #fff;
+        padding-left: 15px;
+        gap: 10px;
+    }
+
+    .has-submenu.open .submenu {
+        display: flex;
+    }
+
+    .nav-menu li.has-submenu:hover > .submenu {
+        display: flex !important; /*TENTAR COLOCAR DISPLAY: NONE !IMPORTANT; CASO NÃO DÊ CERTO*/
+        flex-direction: column; /*E TIRAR ISSO*/
     }
 
     .logo-img {
@@ -2147,45 +2172,54 @@ footer .footer-column {
         font-size: 3rem;
     }
 
+    .btn-primary {
+        display: block;
+        margin: 20px auto 0 auto;
+        text-align: center;
+    }
+
     .hero-subtitle {
         font-size: 1.2rem;
     }
 
     .hero-buttons {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .section-title {
         font-size: 2.3rem;
     }
 
+    .sobre h3 {
+        text-align: center;
+    }
+
     .sobre-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
     .sobre-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .servicos-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .marcas-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .marcas-arrow {
-        display: flex;
+        display: none;
     }
 
     .marcas-prev,
     .marcas-next {
-        top: 50%;
+        top: 64%;
     }
 
     .contato-content {
@@ -2200,42 +2234,47 @@ footer .footer-column {
     }
 
     .form-group {
+        margin-bottom: 15px;
         width: 100%;
-        margin-bottom: 0;
-    }
-
-    .orcamento-form {
-        padding: 40px;
     }
 
     .contato-form {
-        padding: 40px;
         max-width: 100%;
-        margin: 0;
-    }
-
-    .btn-primary {
-        margin: 30px 0 0 auto;
-    }
-
-    .footer-content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-        text-align: left;
+        padding: 30px 10px; /* margem interna bem pequena nas laterais */
+        margin: 0 1.1.5px; /* opcional: uma leve margem externa pra não colar 100% */
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        text-align: center;
     }
 
     .footer-social {
         justify-content: flex-start;
-        margin-top: 25px;
+        margin: 0;
     }
 
-    .whatsapp-btn,
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        text-align: left;
+    }
+
+    .footer-section h4 {
+        text-align: left;
+    }
+
+    .whatsapp-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
     .whatsapp-container {
-        bottom: 25px;
-        right: 25px;
-        width: 60px;
-        height: 60px;
-        font-size: 1.8rem;
+        bottom: 20px;
+        right: 20px;
     }
 
     .whatsapp-menu {
@@ -2243,27 +2282,23 @@ footer .footer-column {
     }
 }
 
-
 /* ======================== */
 /* DESKTOPS GRANDES         */
 /* 1200px pra cima         */
 /* ======================== */
 @media (min-width: 1200px) {
     .header-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: none;
     }
 
     .contact-info {
-        display: flex;
-        gap: 20px;
+        display: none;
     }
 
     .header-info {
-        flex-direction: row;
-        text-align: left;
-        gap: 30px;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
     }
 
     .hamburguer {
@@ -2296,21 +2331,38 @@ footer .footer-column {
     }
 
     .logo-img {
-        max-height: 60px;
+        max-height: 45px;
     }
 
-    .sobre-text h3,
-    .sobre-text p,
-    .subtitle-contato,
-    .contato-form h3 {
-        text-align: left !important;
+    .sobre-text h3 {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sobre-text p {
+        text-align: center;
+    }
+
+    .subtitle-contato {
+        text-align: center !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
+        display: block;
+        width: 100%;
     }
 
     .contato-info {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .contato-form h3 {
+        text-align: center !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: block;
+        width: 100%;
     }
 
     .contato-form {
@@ -2322,9 +2374,9 @@ footer .footer-column {
     }
 
     .btn-primary {
-        display: inline-block;
-        margin: 20px 0 0 auto;
-        text-align: right;
+        display: block;
+        margin: 20px auto 0 auto;
+        text-align: center;
     }
 
     .hero-title {
@@ -2336,10 +2388,8 @@ footer .footer-column {
     }
 
     .hero-buttons {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 20px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .section-title {
@@ -2357,7 +2407,7 @@ footer .footer-column {
     }
 
     .servicos-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .marcas-grid {
@@ -2380,20 +2430,25 @@ footer .footer-column {
     }
 
     .form-group {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         width: 100%;
     }
 
     .orcamento-form {
-        padding: 50px;
+        padding: 30px 20px;
     }
 
     .footer-social {
-        justify-content: flex-start;
-        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 0 auto;
+        margin-top: 20px;
     }
 
     .footer-content {
+        display: flex;
+        justify-content: space-between;
         grid-template-columns: repeat(3, 1fr);
         gap: 40px;
         text-align: left;
@@ -2418,7 +2473,6 @@ footer .footer-column {
         bottom: 80px;
     }
 }
-
 
 @media (max-width: 480px) {
     .container {
