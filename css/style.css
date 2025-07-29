@@ -918,6 +918,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contato-form h3 {
+    text-align: center;
     font-size: 1.8rem;
     color: #1a365d;
     margin-bottom: 30px;
@@ -1419,6 +1420,7 @@ footer .footer-column {
 /* TELAS MUITO PEQUENAS    */
 /* 300px até 499px         */
 /* ======================== */
+
 @media (min-width: 300px) and (max-width: 499px) {
     .header-top,
     .contact-info {
@@ -1483,6 +1485,21 @@ footer .footer-column {
 
     .hamburguer.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .submenu-toggle-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .submenu-toggle {
+        display: inline;
+        font-size: 20px;
+        cursor: pointer;
+        color: #2d3748;
+        transition: transform 0.3s ease;
     }
 
     .has-submenu .submenu {
@@ -1636,11 +1653,11 @@ footer .footer-column {
     }
 }
 
-
 /* ======================== */
 /* SMARTPHONES MEDIANOS    */
 /* 500px até 699px         */
 /* ======================== */
+
 @media (min-width: 500px) and (max-width: 699px) {
     .header-top,
     .contact-info {
@@ -1705,6 +1722,21 @@ footer .footer-column {
 
     .hamburguer.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    .submenu-toggle-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .submenu-toggle {
+        display: inline;
+        font-size: 20px;
+        cursor: pointer;
+        color: #2d3748;
+        transition: transform 0.3s ease;
     }
 
     .has-submenu .submenu {
@@ -1858,12 +1890,12 @@ footer .footer-column {
     }
 }
 
-
 /* ======================== */
 /* SMARTPHONES GRANDES e   */
 /* TABLETS PEQUENOS        */
 /* 700px até 899px         */
 /* ======================== */
+
 @media (min-width: 700px) and (max-width: 899px) {
     .header-top {
         display: none;
@@ -1918,7 +1950,7 @@ footer .footer-column {
     }
 
     .logo-img {
-        max-height: px;
+        max-height: 45px;
     }
 
     .hamburguer.active span:nth-child(1) {
@@ -2022,7 +2054,7 @@ footer .footer-column {
     }
 
     .servicos-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .marcas-grid {
@@ -2035,7 +2067,7 @@ footer .footer-column {
 
     .marcas-prev,
     .marcas-next {
-        top: 64%;
+        top: 66%;
     }
 
     .contato-content {
@@ -2077,7 +2109,6 @@ footer .footer-column {
 
     .footer-section h4 {
         text-align: left;
-        margin-left: 0;
     }
 
     .whatsapp-btn {
@@ -2104,12 +2135,12 @@ footer .footer-column {
     }
 }
 
-
 /* ======================== */
 /* TABLETS GRANDES E       */
 /* NOTEBOOKS PEQUENOS      */
 /* 900px até 1199px        */
 /* ======================== */
+
 @media (min-width: 900px) and (max-width: 1199px) {
     .header-top,
     .contact-info {
@@ -2147,6 +2178,21 @@ footer .footer-column {
         z-index: 999;
     }
 
+    .submenu-toggle-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .submenu-toggle {
+        display: inline;
+        font-size: 20px;
+        cursor: pointer;
+        color: #2d3748;
+        transition: transform 0.3s ease;
+    }
+
     .has-submenu .submenu {
         display: none;
         flex-direction: column;
@@ -2160,8 +2206,8 @@ footer .footer-column {
     }
 
     .nav-menu li.has-submenu:hover > .submenu {
-        display: flex !important; /*TENTAR COLOCAR DISPLAY: NONE !IMPORTANT; CASO NÃO DÊ CERTO*/
-        flex-direction: column; /*E TIRAR ISSO*/
+        display: flex !important; 
+        flex-direction: column; 
     }
 
     .logo-img {
@@ -2201,12 +2247,12 @@ footer .footer-column {
     }
 
     .sobre-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
 
     .servicos-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .marcas-grid {
@@ -2240,15 +2286,23 @@ footer .footer-column {
 
     .contato-form {
         max-width: 100%;
-        padding: 30px 10px; /* margem interna bem pequena nas laterais */
-        margin: 0 1.1.5px; /* opcional: uma leve margem externa pra não colar 100% */
+        padding: 30px 10px; 
+        margin: 0 1.1.5px; 
         border-radius: 12px;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
         text-align: center;
     }
 
+    .contato-form h3 {
+        text-align: center !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: block;
+        width: 100%;
+    }
+
     .footer-social {
-        justify-content: flex-start;
+        justify-content: left;
         margin: 0;
     }
 
@@ -2279,198 +2333,6 @@ footer .footer-column {
 
     .whatsapp-menu {
         bottom: 70px;
-    }
-}
-
-/* ======================== */
-/* DESKTOPS GRANDES         */
-/* 1200px pra cima         */
-/* ======================== */
-@media (min-width: 1200px) {
-    .header-top {
-        display: none;
-    }
-
-    .contact-info {
-        display: none;
-    }
-
-    .header-info {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .hamburguer {
-        display: none;
-    }
-
-    .nav-menu {
-        position: static;
-        transform: none;
-        opacity: 1;
-        visibility: visible;
-        flex-direction: row;
-        gap: 30px;
-        padding: 0;
-        box-shadow: none;
-    }
-
-    .nav-menu .submenu {
-        position: absolute;
-        display: none;
-        flex-direction: column;
-        background: #fff;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        padding: 15px;
-        z-index: 1000;
-    }
-
-    .nav-menu li.has-submenu:hover > .submenu {
-        display: flex !important;
-    }
-
-    .logo-img {
-        max-height: 45px;
-    }
-
-    .sobre-text h3 {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .sobre-text p {
-        text-align: center;
-    }
-
-    .subtitle-contato {
-        text-align: center !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        display: block;
-        width: 100%;
-    }
-
-    .contato-info {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-
-    .contato-form h3 {
-        text-align: center !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        display: block;
-        width: 100%;
-    }
-
-    .contato-form {
-        max-width: 100%;
-        padding: 50px 40px;
-        margin: 0 auto;
-        border-radius: 12px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    .btn-primary {
-        display: block;
-        margin: 20px auto 0 auto;
-        text-align: center;
-    }
-
-    .hero-title {
-        font-size: 3rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .section-title {
-        font-size: 2.5rem;
-    }
-
-    .sobre-content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 50px;
-    }
-
-    .sobre-stats {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    .servicos-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .marcas-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .marcas-arrow {
-        display: flex;
-    }
-
-    .contato-content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 50px;
-    }
-
-    .form-row {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-        width: 100%;
-    }
-
-    .orcamento-form {
-        padding: 30px 20px;
-    }
-
-    .footer-social {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin: 0 auto;
-        margin-top: 20px;
-    }
-
-    .footer-content {
-        display: flex;
-        justify-content: space-between;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
-        text-align: left;
-    }
-
-    .footer-section h4 {
-        text-align: left;
-    }
-
-    .whatsapp-btn {
-        width: 60px;
-        height: 60px;
-        font-size: 1.8rem;
-    }
-
-    .whatsapp-container {
-        bottom: 30px;
-        right: 30px;
-    }
-
-    .whatsapp-menu {
-        bottom: 80px;
     }
 }
 
