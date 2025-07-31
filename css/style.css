@@ -8,19 +8,27 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Adicionado para compensar a navbar fixa */
+    scroll-padding-top: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: #2d3748;
     overflow-x: hidden;
+    max-width: 100%;
 }
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+.site-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -554,8 +562,13 @@ h1, h2, h3, h4, h5, h6 {
     background: #f7fafc;
 }
 
+.sobre-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    }
+
 .sobre-content {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
@@ -852,6 +865,12 @@ h1, h2, h3, h4, h5, h6 {
     background: #f7fafc;
 }
 
+.contato .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px; /* espaçamento lateral para não grudar nas bordas */
+}
+
 .contato-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -909,6 +928,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contato-form {
+    max-width: 800px;
     padding: 40px;
     border-radius: 15px;
     /* Remove o margin-top para alinhar com o topo do .contato-info */
@@ -929,6 +949,26 @@ h1, h2, h3, h4, h5, h6 {
     margin: 30px auto 0 auto; /* margem opcional no topo, centraliza no eixo X */
 }
 
+/* Orçamento */
+.orcamento {
+    padding: 100px 0;
+    padding-top: 180px;
+    background: #f7fafc;
+}
+
+.orcamento-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary,
+.btn-secondary:focus {
+    outline: none !important;
+}
 
 /* Forms */
 .form-group {
@@ -965,29 +1005,10 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 120px;
 }
 
-/* Orçamento */
-.orcamento {
-    padding: 100px 0;
-    padding-top: 180px;
-    background: #f7fafc;
-}
-
-.orcamento-form {
-    max-width: 800px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 50px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.btn-primary,
-.btn-secondary:focus {
-    outline: none !important;
-}
-
 /* Footer */
 .footer {
+    position: relative;
+    z-index: 1;
     background: #1a365d;
     color: #fff;
     padding: 60px 0 20px;
@@ -1416,10 +1437,7 @@ footer .footer-column {
     min-width: 200px;
 }
 
-/* ======================== */
-/* TELAS MUITO PEQUENAS    */
-/* 300px até 499px         */
-/* ======================== */
+/* TELAS MUITO PEQUENAS */
 
 @media (min-width: 300px) and (max-width: 499px) {
     .header-top,
@@ -1593,11 +1611,6 @@ footer .footer-column {
         display: none;
     }
 
-    .marcas-prev,
-    .marcas-next {
-        top: 63%;
-    }
-
     .form-row {
         display: block;
         grid-template-columns: 1fr;
@@ -1653,10 +1666,7 @@ footer .footer-column {
     }
 }
 
-/* ======================== */
-/* SMARTPHONES MEDIANOS    */
-/* 500px até 699px         */
-/* ======================== */
+/* SMARTPHONES MEDIANOS */
 
 @media (min-width: 500px) and (max-width: 699px) {
     .header-top,
@@ -1830,11 +1840,6 @@ footer .footer-column {
         display: none;
     }
 
-    .marcas-prev,
-    .marcas-next {
-        top: 63.5%;
-    }
-
     .form-row {
         display: block;
         grid-template-columns: 1fr;
@@ -1890,11 +1895,7 @@ footer .footer-column {
     }
 }
 
-/* ======================== */
-/* SMARTPHONES GRANDES e   */
-/* TABLETS PEQUENOS        */
-/* 700px até 899px         */
-/* ======================== */
+/* SMARTPHONES GRANDES e TABLETS PEQUENOS */
 
 @media (min-width: 700px) and (max-width: 899px) {
     .header-top {
@@ -2065,11 +2066,6 @@ footer .footer-column {
         display: none;
     }
 
-    .marcas-prev,
-    .marcas-next {
-        top: 66%;
-    }
-
     .contato-content {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -2135,79 +2131,11 @@ footer .footer-column {
     }
 }
 
-/* ======================== */
-/* TABLETS GRANDES E       */
-/* NOTEBOOKS PEQUENOS      */
-/* 900px até 1199px        */
-/* ======================== */
+/* TABLETS GRANDES E NOTEBOOKS PEQUENOS */
 
 @media (min-width: 900px) and (max-width: 1199px) {
-    .header-top,
-    .contact-info {
-        display: none;
-    }
-
-    .header-info {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
     .hamburguer {
         display: none;
-    }
-
-    .nav-menu {
-        position: static;
-        flex-direction: row;
-        padding: 0;
-        box-shadow: none;
-        transform: none;
-        opacity: 1;
-        visibility: visible;
-        gap: 25px;
-    }
-
-    .nav-menu .submenu {
-        position: absolute;
-        background: #fff;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        display: none;
-        padding: 15px;
-        margin-top: 10px;
-        z-index: 999;
-    }
-
-    .submenu-toggle-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .submenu-toggle {
-        display: inline;
-        font-size: 20px;
-        cursor: pointer;
-        color: #2d3748;
-        transition: transform 0.3s ease;
-    }
-
-    .has-submenu .submenu {
-        display: none;
-        flex-direction: column;
-        background: #fff;
-        padding-left: 15px;
-        gap: 10px;
-    }
-
-    .has-submenu.open .submenu {
-        display: flex;
-    }
-
-    .nav-menu li.has-submenu:hover > .submenu {
-        display: flex !important; 
-        flex-direction: column; 
     }
 
     .logo-img {
@@ -2228,94 +2156,76 @@ footer .footer-column {
         font-size: 1.2rem;
     }
 
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        overflow: visible;
+    }
+
+    .footer-section {
+        min-width: unset;
+    }
+
+    .whatsapp-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .whatsapp-container {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .whatsapp-menu {
+        bottom: 70px;
+    }
+}
+
+/* DESKTOPS GRANDES */
+
+@media (min-width: 1200px) {
+    .hamburguer {
+        display: none;
+    }
+
+    .logo-img {
+        max-height: 60px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .btn-primary {
+        display: block;
+        margin: 20px auto 0 auto;
+        text-align: center;
+    }
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
     }
 
-    .section-title {
-        font-size: 2.3rem;
-    }
-
-    .sobre h3 {
-        text-align: center;
-    }
-
-    .sobre-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .sobre-stats {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    .servicos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .marcas-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .marcas-arrow {
-        display: none;
-    }
-
-    .marcas-prev,
-    .marcas-next {
-        top: 64%;
-    }
-
-    .contato-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-    }
-
-    .form-row {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-        width: 100%;
-    }
-
-    .contato-form {
-        max-width: 100%;
-        padding: 30px 10px; 
-        margin: 0 1.1.5px; 
-        border-radius: 12px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-        text-align: center;
-    }
-
-    .contato-form h3 {
-        text-align: center !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        display: block;
-        width: 100%;
-    }
-
-    .footer-social {
-        justify-content: left;
-        margin: 0;
+    .hero-subtitle {
+        font-size: 1.2rem;
     }
 
     .footer-content {
-        display: flex;
-        justify-content: space-between;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
-        text-align: left;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        overflow: visible;
     }
 
-    .footer-section h4 {
-        text-align: left;
+    .footer-section {
+        min-width: unset;
     }
 
     .whatsapp-btn {
@@ -2401,4 +2311,11 @@ footer .footer-column {
   footer .footer-column {
         min-width: unset;
   }
+}
+/*
+body::after {
+    content: 'debug';
+    display: block;
+    background: red;
+    height: 5px;
 }
