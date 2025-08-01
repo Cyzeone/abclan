@@ -27,140 +27,142 @@
 
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-top">
+    <div class="site-wrapper">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-info">
+                        <div class="contact-info">
+                            <span><i class="fas fa-phone"></i> (11) 4477-2277</span>
+                            <span><i class="fas fa-envelope"></i> comercial@abclan.com.br</span>
+                            <span><i class="fas fa-clock"></i> Segunda à Sexta - 8h30 às 18h</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar">
+                <div class="container">
+                    <div class="nav-brand">
+                        <a href="index.html"><img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img"></a>
+                    </div>
+
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
+                        
+                        <li class="has-submenu">
+                            <a href="index.html#servicos" class="nav-link">Produtos</a>
+                            <ul class="submenu">
+                                <li><a href="cabeamentometalico.html" class="nav-link">Cabeamento Metálico</a></li>
+                                <li><a href="cabos.html" class="nav-link">Cabeamento Óptico</a></li>
+                                <li><a href="ativos.html" class="nav-link">Ativos</a></li>
+                                <li><a href="racks.html" class="nav-link">Racks e Acessórios</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="contato.html" class="nav-link">Contato</a></li>
+                        <li><a href="solicitarorcamento.html" class="nav-link btn-orcamento">Orçamento</a></li>
+                    </ul>
+
+                    <div class="hamburguer">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Contato -->
+        <section id="contato" class="contato">
             <div class="container">
-                <div class="header-info">
-                    <div class="contact-info">
-                        <span><i class="fas fa-phone"></i> (11) 4477-2277</span>
-                        <span><i class="fas fa-envelope"></i> comercial@abclan.com.br</span>
-                        <span><i class="fas fa-clock"></i> Segunda à Sexta - 8h30 às 18h</span>
+                <div class="section-header">
+                    <h2 class="section-title">Entre em Contato</h2>
+                    <p class="section-subtitle">Estamos prontos para atender suas necessidades</p>
+                </div>
+
+                <div class="contato-content">
+                    <div class="contato-info">
+                        <h3 class="subtitle-contato">Informações de Contato</h3>
+
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Endereço</h4>
+                                <p>Av. Utinga, 1586 - Utinga<br>CEP: 09220-611 - Santo André - SP</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefones</h4>
+                                <p>(11) 4477-2277<br>(11) 94027-2784<br>(11) 94075-2234</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>E-mails</h4>
+                                <p>comercial@abclan.com.br<br>abclantelecom@gmail.com<br>nfeeletronica@abclan.com.br<br>alessandro@abclan.com.br<br>arnaldo@abclan.com.br<br>denis@abclan.com.br<br>rogerio@abclan.com.br<br>cpanels@abclan.com.br</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horário de Funcionamento</h4>
+                                <p>Segunda a Sexta: 8h30 às 18h<br>Sábado e Domingo: Fechado</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
+
+                    <div class="contato-form">
+                        <h3>Envie uma Mensagem</h3>
+                        <form action="envia-formulario.php" method="POST">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Seu Nome" required autocomplete="name">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Seu E-mail" required autocomplete="email">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="tel" id="telefone" name="telefone" placeholder="Seu Telefone" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')" autocomplete="tel">
+                            </div>
+
+                            <div class="form-group select-wrapper">
+                                <select id="assunto" name="assunto" required autocomplete="off">
+                                    <option value="" disabled selected hidden>Selecione sua opção</option>
+                                    <option value="cabeamento">Financeiro</option>
+                                    <option value="telecom">Dúvidas</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="mensagem" name="mensagem" placeholder="Sua Mensagem" rows="5" required autocomplete="off"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-brand">
-                    <a href="index.html"><img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img"></a>
-                </div>
-
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
-                    
-                    <li class="has-submenu">
-                        <a href="index.html#servicos" class="nav-link">Produtos</a>
-                        <ul class="submenu">
-                            <li><a href="cabeamentometalico.html" class="nav-link">Cabeamento Metálico</a></li>
-                            <li><a href="cabos.html" class="nav-link">Cabeamento Óptico</a></li>
-                            <li><a href="ativos.html" class="nav-link">Ativos</a></li>
-                            <li><a href="racks.html" class="nav-link">Racks e Acessórios</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="contato.html" class="nav-link">Contato</a></li>
-                    <li><a href="solicitarorcamento.html" class="nav-link btn-orcamento">Orçamento</a></li>
-                </ul>
-
-                <div class="hamburguer">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Contato -->
-    <section id="contato" class="contato">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Entre em Contato</h2>
-                <p class="section-subtitle">Estamos prontos para atender suas necessidades</p>
-            </div>
-
-            <div class="contato-content">
-                <div class="contato-info">
-                    <h3 class="subtitle-contato">Informações de Contato</h3>
-
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Endereço</h4>
-                            <p>Av. Utinga, 1586 - Utinga<br>CEP: 09220-611 - Santo André - SP</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Telefones</h4>
-                            <p>(11) 4477-2277<br>(11) 94027-2784<br>(11) 94075-2234</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>E-mails</h4>
-                            <p>comercial@abclan.com.br<br>abclantelecom@gmail.com<br>nfeeletronica@abclan.com.br<br>alessandro@abclan.com.br<br>arnaldo@abclan.com.br<br>denis@abclan.com.br<br>rogerio@abclan.com.br<br>cpanels@abclan.com.br</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Horário de Funcionamento</h4>
-                            <p>Segunda a Sexta: 8h30 às 18h<br>Sábado e Domingo: Fechado</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contato-form">
-                    <h3>Envie uma Mensagem</h3>
-                    <form action="envia-formulario.php" method="POST">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Seu Nome" required autocomplete="name">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Seu E-mail" required autocomplete="email">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="tel" id="telefone" name="telefone" placeholder="Seu Telefone" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')" autocomplete="tel">
-                        </div>
-
-                        <div class="form-group select-wrapper">
-                            <select id="assunto" name="assunto" required autocomplete="off">
-                                <option value="" disabled selected hidden>Selecione sua opção</option>
-                                <option value="cabeamento">Financeiro</option>
-                                <option value="telecom">Dúvidas</option>
-                                <option value="outros">Outros</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea id="mensagem" name="mensagem" placeholder="Sua Mensagem" rows="5" required autocomplete="off"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

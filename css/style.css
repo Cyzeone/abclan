@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Adicionado para compensar a navbar fixa */
     scroll-padding-top: 80px;
     height: 100%;
     display: flex;
@@ -23,6 +24,11 @@ body {
     color: #2d3748;
     overflow-x: hidden;
     max-width: 100%;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .site-wrapper {
@@ -2170,6 +2176,18 @@ footer .footer-column {
         min-width: unset;
     }
 
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .site-wrapper {
+        padding-bottom: 120px; /* Ajuste conforme a altura real do footer */
+    }
+
     .whatsapp-btn {
         bottom: 20px;
         right: 20px;
@@ -2226,6 +2244,18 @@ footer .footer-column {
 
     .footer-section {
         min-width: unset;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .site-wrapper {
+        padding-bottom: 120px; /* Ajuste conforme a altura real do footer */
     }
 
     .whatsapp-btn {
@@ -2312,6 +2342,7 @@ footer .footer-column {
         min-width: unset;
   }
 }
+
 /*
 body::after {
     content: 'debug';
