@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    flex: 1;
+    min-height: 100vh; /* <-- ESSENCIAL para empurrar o footer */
     display: flex;
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
@@ -1014,6 +1014,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 .footer {
+    margin-top: auto;
     position: relative;
     z-index: 1;
     background: #1a365d;
@@ -1166,6 +1167,44 @@ h1, h2, h3, h4, h5, h6 {
     background: #fff;
     transition: background 0.2s;
     white-space: nowrap;
+}
+
+/* BANDEIRAS PAGAMENTO */
+.footer-bandeiras {
+    position: absolute;
+    bottom: 60px; /* distância do fundo do footer */
+    left: 20px;   /* distância da borda esquerda */
+    display: flex;
+    gap: 12px;
+    flex-wrap: nowrap;
+    align-items: center;
+    z-index: 2;
+}
+
+.footer-bandeiras img {
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Ajustes por logo */
+.logo-visa {
+    height: 50px;
+}
+
+.logo-master {
+    height: 30px;
+}
+
+.logo-pix {
+    height: 22px;
+}
+
+.logo-bndes {
+    height: 25px;
+}
+
+.footer-bandeiras img:hover {
+    transform: scale(1.05);
 }
 
 .whatsapp-menu a:hover {
@@ -1414,33 +1453,12 @@ a:focus {
     outline: none !important;
 }
 
-/* Evita que o site tenha rolagem lateral em modo desktop forçado no mobile */
-body {
-    overflow-x: hidden;
-}
-
 /* Garante que todos os containers respeitem a largura da tela */
 .container {
     max-width: 100%;
     width: 100%;
     box-sizing: border-box;
     padding: 0 20px;
-}
-
-/* Ajustes no footer para garantir responsividade */
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 40px 20px;
-    background: #1a365d;
-    color: white;
-}
-
-footer .footer-column {
-    flex: 1 1 200px;
-    min-width: 200px;
 }
 
 /* TELAS MUITO PEQUENAS */
@@ -1564,9 +1582,10 @@ footer .footer-column {
     }
 
     .contato-form {
-        max-width: 100%;
-        padding: 30px 10px;
-        margin: 0 1.1.5px;
+        max-width: 800px;  /* igual ao orçamento */
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 20px;
         border-radius: 12px;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     }
@@ -1578,11 +1597,11 @@ footer .footer-column {
     }
 
     .hero-title {
-        font-size: 2.3rem;
+        font-size: 2.7rem;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .hero-buttons {
@@ -1591,7 +1610,7 @@ footer .footer-column {
     }
 
     .section-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .sobre-content,
@@ -1652,6 +1671,13 @@ footer .footer-column {
     .footer-section h4 {
         text-align: left;
         margin-left: 0;
+    }
+
+    .footer-bandeiras {
+        order: unset; /* só por segurança */
+        grid-column: 1 / -1; /* força ocupar linha inteira */
+        margin-top: 10px;
+        justify-content: center; /* centraliza as bandeiras */
     }
 
     .whatsapp-btn {
@@ -1793,9 +1819,10 @@ footer .footer-column {
     }
 
     .contato-form {
-        max-width: 100%;
-        padding: 30px 10px;
-        margin: 0 1.1.5px;
+        max-width: 800px;  /* igual ao orçamento */
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 20px;
         border-radius: 12px;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     }
@@ -1881,6 +1908,13 @@ footer .footer-column {
     .footer-section h4 {
         text-align: left;
         margin-left: 0;
+    }
+
+    .footer-bandeiras {
+        order: unset; /* só por segurança */
+        grid-column: 1 / -1; /* força ocupar linha inteira */
+        margin-top: 10px;
+        justify-content: center; /* centraliza as bandeiras */
     }
 
     .whatsapp-btn {
@@ -2111,6 +2145,13 @@ footer .footer-column {
 
     .footer-section h4 {
         text-align: left;
+    }
+
+    .footer-bandeiras {
+        order: unset; /* só por segurança */
+        grid-column: 1 / -1; /* força ocupar linha inteira */
+        margin-top: 10px;
+        justify-content: center; /* centraliza as bandeiras */
     }
 
     .whatsapp-btn {
