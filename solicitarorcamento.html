@@ -29,20 +29,20 @@
 <body>
     <div class="site-wrapper">
         <!-- Header -->
-        <header class="header">
+        <header class="header" aria-label="Cabeçalho do site">
             <div class="header-top">
                 <div class="container">
                     <div class="header-info">
                         <div class="contact-info">
-                            <span><i class="fas fa-phone"></i> (11) 4477-2277</span>
-                            <span><i class="fas fa-envelope"></i> comercial@abclan.com.br</span>
-                            <span><i class="fas fa-clock"></i> Segunda à Sexta - 8h30 às 18h</span>
+                            <span aria-label="Telefone"><i class="fas fa-phone"></i> (11) 4477-2277</span>
+                            <span aria-label="E-mail comercial"><i class="fas fa-envelope"></i> comercial@abclan.com.br</span>
+                            <span aria-label="Horário de funcionamento"><i class="fas fa-clock"></i> Segunda à Sexta - 8h30 às 18h</span>
                         </div>
                         <div class="social-links">
-                            <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram">
+                            <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram da ABCLAN">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook">
+                            <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook da ABCLAN">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </div>
@@ -50,31 +50,33 @@
                 </div>
             </div>
 
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Menu de navegação principal">
                 <div class="container">
                     <div class="nav-brand">
-                        <a href="index.html"><img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img"></a>
+                        <a href="index.html" aria-label="Voltar para a Home">
+                            <img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img">
+                        </a>
                     </div>
 
                     <ul class="nav-menu">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
-                        
+                        <li><a href="index.html" class="nav-link" aria-label="Ir para Home">Home</a></li>
+                        <li><a href="sobre.html" class="nav-link" aria-label="Ir para Sobre Nós">Sobre Nós</a></li>
+
                         <li class="has-submenu">
-                            <a href="index.html#servicos" class="nav-link">Produtos</a>
+                            <a href="index.html#servicos" class="nav-link" aria-label="Ver produtos">Produtos</a>
                             <ul class="submenu">
-                                <li><a href="cabeamentometalico.html" class="nav-link">Cabeamento Metálico</a></li>
-                                <li><a href="cabos.html" class="nav-link">Cabeamento Óptico</a></li>
-                                <li><a href="ativos.html" class="nav-link">Ativos</a></li>
-                                <li><a href="racks.html" class="nav-link">Racks e Acessórios</a></li>
+                                <li><a href="cabeamentometalico.html" class="nav-link" aria-label="Cabeamento Metálico">Cabeamento Metálico</a></li>
+                                <li><a href="cabos.html" class="nav-link" aria-label="Cabeamento Óptico">Cabeamento Óptico</a></li>
+                                <li><a href="ativos.html" class="nav-link" aria-label="Ativos">Ativos</a></li>
+                                <li><a href="racks.html" class="nav-link" aria-label="Racks e Acessórios">Racks e Acessórios</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="contato.html" class="nav-link">Contato</a></li>
-                        <li><a href="solicitarorcamento.html" class="nav-link btn-orcamento">Orçamento</a></li>
+                        <li><a href="contato.html" class="nav-link" aria-label="Ir para Contato">Contato</a></li>
+                        <li><a href="solicitarorcamento.html" class="nav-link btn-orcamento" aria-label="Solicitar Orçamento">Orçamento</a></li>
                     </ul>
 
-                    <div class="hamburguer">
+                    <div class="hamburguer" aria-label="Botão para abrir o menu responsivo" role="button" tabindex="0">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -84,40 +86,40 @@
         </header>
 
         <!-- Orçamento -->
-        <section id="orcamento" class="orcamento">
+        <section id="orcamento" class="orcamento" aria-label="Seção de solicitação de orçamento">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Solicite um Orçamento</h2>
                     <p class="section-subtitle">Receba uma proposta personalizada para seu projeto</p>
                 </div>
 
-                <div class="orcamento-form">
-                    <form id="budgetForm">
+                <div class="orcamento-form" aria-label="Formulário de orçamento">
+                    <form id="budgetForm" action="envia-formulario.php" method="POST">
                         <div class="form-row">
                             <div class="form-group">
-                                <input type="text" id="empresa" name="empresa" placeholder="Nome da Empresa" required autocomplete="organization">
+                                <input type="text" id="empresa" name="empresa" placeholder="Nome da Empresa" required autocomplete="organization" aria-label="Nome da Empresa">
                             </div>
 
                             <div class="form-group">
-                                <input type="text" id="responsavel" name="responsavel" placeholder="Nome do Responsável" required autocomplete="name">
+                                <input type="text" id="responsavel" name="responsavel" placeholder="Nome do Responsável" required autocomplete="name" aria-label="Nome do Responsável">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <input type="email" id="emailOrcamento" name="email" placeholder="E-mail para Contato" required autocomplete="email">
+                                <input type="email" id="emailOrcamento" name="email" placeholder="E-mail para Contato" required autocomplete="email" aria-label="E-mail para Contato">
                             </div>
 
                             <div class="form-group">
-                                <input type="tel" id="telefoneOrcamento" name="telefone" placeholder="Telefone para Contato" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required autocomplete="tel">
+                                <input type="tel" id="telefoneOrcamento" name="telefone" placeholder="Telefone para Contato" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required autocomplete="tel" aria-label="Telefone para Contato">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <textarea id="descricaoProjeto" name="descricao" placeholder="Descreva seu projeto ou necessidade" rows="6" required autocomplete="off"></textarea>
+                            <textarea id="descricaoProjeto" name="descricao" placeholder="Descreva seu projeto ou necessidade" rows="6" required autocomplete="off" aria-label="Descrição do projeto ou necessidade"></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Solicitar Orçamento</button>
+                        <button type="submit" class="btn btn-primary" aria-label="Enviar solicitação de orçamento">Solicitar Orçamento</button>
                     </form>
                 </div>
             </div>
@@ -125,17 +127,17 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" aria-label="Rodapé do site com informações de contato e navegação">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img-footer">
                     <p>Tecnologia de ponta para redes seguras e eficientes.</p>
                     <div class="footer-social">
-                        <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram">
+                        <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram da ABC LAN">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook">
+                        <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook da ABC LAN">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
@@ -160,7 +162,7 @@
                         <li><i class="fas fa-envelope"></i> comercial@abclan.com.br</li>
                         <li><i class="fas fa-envelope"></i> abclantelecom@gmail.com</li>
                         <li><i class="fas fa-map-marker-alt"></i><u>
-                            <a href="https://www.google.com/maps/place/Av.+Utinga,+1586+-+Utinga,+Santo+André+-+SP,+09220-611" target="_blank" rel="noopener"> Av. Utinga, 1586 - Utinga, Santo André - SP</u></a></li>
+                            <a href="https://www.google.com/maps/place/Av.+Utinga,+1586+-+Utinga,+Santo+André+-+SP,+09220-611" target="_blank" rel="noopener" aria-label="Ver localização da ABC LAN no Google Maps"> Av. Utinga, 1586 - Utinga, Santo André - SP</u></a></li>
                     </ul>
                 </div>
 
@@ -175,8 +177,9 @@
                 <div class="footer-bandeiras">
                         <img src="images/visa.png" alt="Visa" class="logo-visa">
                         <img src="images/mastercard.png" alt="MasterCard" class="logo-master">
-                        <img src="images/PIX.png" alt="Pix" class="logo-pix">
-                        <img src="images/BNDES.png" alt="BNDES" class="logo-bndes">
+                        <img src="images/pix.png" alt="Pix" class="logo-pix">
+                        <img src="images/bndes.png" alt="BNDES" class="logo-bndes">
+                        <img src="images/barcode.png" alt="Barcode" class="logo-barcode">
                 </div>
             </div>
 
@@ -185,15 +188,15 @@
             </div>
         </div>
     </footer>
-
+    
     <!-- Whatsapp Botão -->
-    <div class="whatsapp-container">
+    <div class="whatsapp-container" aria-label="Botão de acesso ao WhatsApp">
         <a class="whatsapp-btn" id="whatsappToggle" aria-label="Abrir opções de WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <div class="whatsapp-menu" id="whatsappMenu">
-            <a href="https://wa.me/5511940272784" target="_blank">📞 Suporte</a>
-            <a href="https://wa.me/5511940752234" target="_blank">📞 Comercial</a>
+        <div class="whatsapp-menu" id="whatsappMenu" aria-label="Menu com contatos de suporte e comercial no WhatsApp">
+            <a href="https://wa.me/5511940272784" target="_blank" aria-label="Falar com Suporte via WhatsApp">📞 Suporte</a>
+            <a href="https://wa.me/5511940752234" target="_blank" aria-label="Falar com Comercial via WhatsApp">📞 Comercial</a>
         </div>
     </div>
 

@@ -61,37 +61,144 @@ navLinks.forEach(link => {
     });
 });
 
-// Forms
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const formData = new FormData(contactForm);
-        showNotification('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
-        contactForm.reset();
-    });
+// AJAX Forms
+function sendFormAJAX(form, successMessage) {
+    const formData = new FormData(form);
+    fetch('envia-formulario.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            showNotification(successMessage, 'success');
+            form.reset();
+        } else {
+            showNotification(data.message || 'Erro ao enviar o formulário.', 'error');
+        }
+    })
+    .catch(() => showNotification('Erro de conexão. Tente novamente.', 'error'));
 }
-if (budgetForm) {
-    budgetForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const formData = new FormData(budgetForm);
-        showNotification('Solicitação de orçamento enviada com sucesso! Entraremos em contato em breve.', 'success');
-        budgetForm.reset();
+
+// Validação de formulário
+function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function validatePhone(phone) {
+    return /^[\(\)\s\-\+\d]{10,}$/.test(phone);
+}
+
+// Retorna true se válido, false se erro
+function validateField(field) {
+    const value = field.value.trim();
+
+    if (field.required && !value) {
+        showFieldError(field, 'Este campo é obrigatório.');
+        return false;
+    }
+
+    if (field.name === 'email' && !validateEmail(value)) {
+        showFieldError(field, 'Por favor, insira um e-mail válido.');
+        return false;
+    }
+
+    if (field.name === 'telefone' && !validatePhone(value)) {
+        showFieldError(field, 'Por favor, insira um telefone válido.');
+        return false;
+    }
+
+    clearFieldError(field);
+    return true;
+}
+
+function showFieldError(field, msg) {
+    clearFieldError(field);
+    field.style.borderColor = '#f56565';
+    const error = document.createElement('div');
+    error.className = 'field-error';
+    error.textContent = msg;
+    error.style.cssText = 'color:#f56565;font-size:14px;margin-top:5px;';
+    field.parentNode.appendChild(error);
+}
+
+function clearFieldError(field) {
+    field.style.borderColor = '#e2e8f0';
+    field.parentNode.querySelector('.field-error')?.remove();
+}
+
+// Adiciona validação em tempo real e ao sair do campo
+function addFormValidation(form) {
+    form.querySelectorAll('input, select, textarea').forEach(field => {
+        field.addEventListener('blur', () => validateField(field));
+        field.addEventListener('input', () => clearFieldError(field));
     });
 }
 
-// Notification
+// Valida todo o formulário antes de enviar, retorna true/false
+function validateForm(form) {
+    let isValid = true;
+
+    form.querySelectorAll('input, select, textarea').forEach(field => {
+        if (!validateField(field)) {
+            isValid = false;
+        }
+    });
+
+    return isValid;
+}
+
+if (contactForm) {
+    addFormValidation(contactForm);
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (validateForm(contactForm)) {
+            sendFormAJAX(contactForm, 'Mensagem enviada com sucesso! Entraremos em contato em breve.');
+        }
+    });
+}
+
+if (budgetForm) {
+    addFormValidation(budgetForm);
+
+    budgetForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (validateForm(budgetForm)) {
+            sendFormAJAX(budgetForm, 'Solicitação de orçamento enviada com sucesso! Entraremos em contato em breve.');
+        }
+    });
+}
+
+// Notificação visual
 function showNotification(message, type = 'info') {
     document.querySelectorAll('.notification').forEach(n => n.remove());
+
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
+
     notification.innerHTML = `
-        <div class="notification-content">
+        <div class="notification-content" style="display: flex; align-items: center; justify-content: space-between;">
             <span>${message}</span>
-            <button class="notification-close">&times;</button>
-        </div>`;
-    notification.style.cssText = `position:fixed;top:20px;right:20px;background:${type==='success'?'#48bb78':type==='error'?'#f56565':'#4299e1'};color:#fff;padding:15px 20px;border-radius:8px;z-index:10000;max-width:400px;box-shadow:0 5px 15px rgba(0,0,0,0.2);`;
+        </div>
+    `;
+
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${type === 'success' ? '#48bb78' : type === 'error' ? '#f56565' : '#4299e1'};
+        color: #fff;
+        padding: 15px 20px;
+        border-radius: 8px;
+        z-index: 10000;
+        max-width: 400px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    `;
+
     document.body.appendChild(notification);
-    notification.querySelector('.notification-close').onclick = () => notification.remove();
+
+    // A notificação desaparecerá automaticamente após 5 segundos
     setTimeout(() => notification.remove(), 5000);
 }
 
@@ -100,7 +207,8 @@ function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 function validatePhone(phone) {
-    return /^[\(\)\s\-\+\d]{10,}$/.test(phone);
+    const regex = /^(\+55\s?)?(\(?\d{2}\)?\s?)?(\d{4,5}[-.\s]?\d{4})$/;
+    return regex.test(phone.trim());
 }
 function validateField(field) {
     const value = field.value.trim();
@@ -255,35 +363,6 @@ document.querySelectorAll('.ler-mais').forEach(botao => {
             botao.textContent = "Mostrar menos";
         }
     });
-});
-
-// Zoom da imagem
-document.addEventListener('DOMContentLoaded', () => {
-    const imagensProdutos = document.querySelectorAll('.produto-img img');
-    const modal = document.getElementById('zoom-modal');
-    const modalImg = document.getElementById('zoom-image');
-    const closeModal = document.querySelector('.close-modal');
-
-    imagensProdutos.forEach(img => {
-        img.addEventListener('click', () => {
-            if (modal && modalImg) {
-                modal.style.display = 'flex';
-                modalImg.src = img.src;
-                modalImg.alt = img.alt;
-            }
-        });
-    });
-
-    if (closeModal && modal) {
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-    }
 });
 
 // Hamburguer: abre/fecha menu

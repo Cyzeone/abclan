@@ -29,20 +29,20 @@
 <body>
     <div class="site-wrapper">
         <!-- Header -->
-        <header class="header">
+        <header class="header" aria-label="Cabeçalho do site">
             <div class="header-top">
                 <div class="container">
                     <div class="header-info">
                         <div class="contact-info">
-                            <span><i class="fas fa-phone"></i> (11) 4477-2277</span>
-                            <span><i class="fas fa-envelope"></i> comercial@abclan.com.br</span>
-                            <span><i class="fas fa-clock"></i> Segunda à Sexta - 8h30 às 18h</span>
+                            <span aria-label="Telefone"><i class="fas fa-phone"></i> (11) 4477-2277</span>
+                            <span aria-label="E-mail comercial"><i class="fas fa-envelope"></i> comercial@abclan.com.br</span>
+                            <span aria-label="Horário de funcionamento"><i class="fas fa-clock"></i> Segunda à Sexta - 8h30 às 18h</span>
                         </div>
                         <div class="social-links">
-                            <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram">
+                            <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram da ABCLAN">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook">
+                            <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook da ABCLAN">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </div>
@@ -50,31 +50,33 @@
                 </div>
             </div>
 
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Menu de navegação principal">
                 <div class="container">
                     <div class="nav-brand">
-                        <a href="index.html"><img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img"></a>
+                        <a href="index.html" aria-label="Voltar para a Home">
+                            <img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img">
+                        </a>
                     </div>
 
                     <ul class="nav-menu">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
-                        
+                        <li><a href="index.html" class="nav-link" aria-label="Ir para Home">Home</a></li>
+                        <li><a href="sobre.html" class="nav-link" aria-label="Ir para Sobre Nós">Sobre Nós</a></li>
+
                         <li class="has-submenu">
-                            <a href="index.html#servicos" class="nav-link">Produtos</a>
+                            <a href="index.html#servicos" class="nav-link" aria-label="Ver produtos">Produtos</a>
                             <ul class="submenu">
-                                <li><a href="cabeamentometalico.html" class="nav-link">Cabeamento Metálico</a></li>
-                                <li><a href="cabos.html" class="nav-link">Cabeamento Óptico</a></li>
-                                <li><a href="ativos.html" class="nav-link">Ativos</a></li>
-                                <li><a href="racks.html" class="nav-link">Racks e Acessórios</a></li>
+                                <li><a href="cabeamentometalico.html" class="nav-link" aria-label="Cabeamento Metálico">Cabeamento Metálico</a></li>
+                                <li><a href="cabos.html" class="nav-link" aria-label="Cabeamento Óptico">Cabeamento Óptico</a></li>
+                                <li><a href="ativos.html" class="nav-link" aria-label="Ativos">Ativos</a></li>
+                                <li><a href="racks.html" class="nav-link" aria-label="Racks e Acessórios">Racks e Acessórios</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="contato.html" class="nav-link">Contato</a></li>
-                        <li><a href="solicitarorcamento.html" class="nav-link btn-orcamento">Orçamento</a></li>
+                        <li><a href="contato.html" class="nav-link" aria-label="Ir para Contato">Contato</a></li>
+                        <li><a href="solicitarorcamento.html" class="nav-link btn-orcamento" aria-label="Solicitar Orçamento">Orçamento</a></li>
                     </ul>
 
-                    <div class="hamburguer">
+                    <div class="hamburguer" aria-label="Botão para abrir o menu responsivo" role="button" tabindex="0">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -88,281 +90,70 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Cabeamento Metálico</h2>
-                    <p class="section-subtitle">Conheça nossos produtos</p>
+                    <p class="section-subtitle">Conheça nossos produtos e fabricantes</p>
                 </div>
 
-                <div class="lista-produtos">
-
+                <div class="galeria-produtos" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 60px;">
                     <div class="produto-item">
-                        <div class="produto-img">
-                            <img src="imagens-produtos/cabeamento-metalico/cat5e.png" alt="Cabo Cat5e">
-                        </div>
-                        <div class="produto-info">
-                            <h3>Cabo Cat5e</h3>
-                            <p>
-                                A linha de cabo CAT5e Nexans é a oferta de largura de banda de 100MHz para aplicações classe D até 1Gbits.
-                                Os cabos CAT5e da Nexans foram projetados para aplicações horizontais em redes de cabeamento estruturado para 
-                                conectar a tomada do usuário com o painel de administração ou para interligação de painéis de administração.
-                            </p>
-                            <div class="more-text">
-                                <h4>Aplicações:</h4>
-                                <ul>
-                                    <li>FAST ETHERNET 100BASE-TX</li>
-                                    <li>GIGABIT ETHERNET 1000BASE-T</li>
-                                    <li>TOKEN RING (100 Mbps)</li>
-                                    <li>ATM LAN (155 Mbps & 622 Mbps)</li>
-                                    <li>ISDN</li>
-                                    <li>POE - POWER OVER ETHERNET</li>
-                                    <li>POE+ - POWER OVER ETHERNET PLUS</li>
-                                    <li>Comunicação Analógica e Digital para Vídeo e Voz</li>
-                                </ul>
+                        <img src="imagens-produtos/cabeamento-metalico/cabocat5e.png" alt="Cabo Cat5e">
+                        <p class="produto-nome">Cabo Cat5e</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="imagens-produtos/cabeamento-metalico/cabocat6.png" alt="Cabo Cat6">
+                        <p class="produto-nome">Cabo Cat6</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="imagens-produtos/cabeamento-metalico/" alt="Cabo Cat6a">
+                        <p class="produto-nome">Cabo Cat6a</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="imagens-produtos/cabeamento-metalico/caboblindado.jpg" alt="Cabo Blindado">
+                        <p class="produto-nome">Cabo Blindado</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="imagens-produtos/cabeamento-metalico/conectorrj45.png" alt="Conector RJ45">
+                        <p class="produto-nome">Conector RJ45</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="imagens-produtos/cabeamento-metalico/keystone.png" alt="Keystone">
+                        <p class="produto-nome">Keystone</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="imagens-produtos/cabeamento-metalico/patchcord.png" alt="Patch Cord">
+                        <p class="produto-nome">Patch Cord</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="imagens-produtos/cabeamento-metalico/patchpanel.png" alt="Patch Panel">
+                        <p class="produto-nome">Patch Panel</p>
+                    </div>
+                </div>
 
-                                <h4>Construção:</h4>
-                                <ul>
-                                    <li>Categoria 5e U/UTP</li>
-                                    <li>PVC: CMX | CM ou LSZH</li>
-                                    <li>4 pares trançados atendendo ao padrão de cores</li>
-                                    <li>24 AWG</li>
-                                    <li>Condutores de cobre nu, isolados em polietileno de alta densidade</li>
-                                </ul>
-
-                                <h4>Instalação:</h4>
-                                <ul>
-                                    <li>Ambiente Interno - não agressivo (7 cores padrões: Azul, Vermelho, Cinza, Preto, Branco, Amarelo, Verde e outras sob consulta)</li>
-                                    <li>Interno/Externo - não agressivo (na cor preta)</li>
-                                </ul>
-
-                                <h4>Certificações:</h4>
-                                <ul>
-                                    <li>Diretiva RoHS - Restrição de metais pesados</li>
-                                    <li>ABNT NBR 14565</li>
-                                    <li>ABNT NBR 14703</li>
-                                    <li>ABNT NBR 14705</li>
-                                    <li>UL Listed</li>
-                                    <li>ANATEL</li>
-                                </ul>
-
-                                <h4>Embalagem:</h4>
-                                <ul>
-                                    <li>Caixa de 100m (CMX)</li>
-                                    <li>Caixa de 305m (CMX / CM / LSZH)</li>
-                                </ul>
-
-                                <h4>Garantia:</h4>
-                                <p>2 anos (Consultar programa de garantia estendida de 25 anos).</p>
-                            </div>
-
-                            <button class="ler-mais">Ler mais</button>
-                        </div>
+                <div class="fabricantes-marcas">
+                    <div class="section-header">
+                        <h2 class="section-title">Fabricantes Parceiros</h2>
+                        <p class="section-subtitle">Marcas responsáveis pelos produtos exibidos acima</p>
                     </div>
 
-
-                    <div class="produto-item">
-                        <div class="produto-img">
-                            <img src="imagens-produtos/cabeamento-metalico/cat6.png" alt="Cabo Cat6">
-                        </div>
-                        <div class="produto-info">
-                            <h3>Cabo Cat6</h3>
-                            <p>
-                                A linha de cabos CAT6 Nexans é a oferta de largura de banda de 250MHz para as
-                                aplicações classe E até 1Gbits. Os cabos Nexans Cat6 U/UTP são projetados para
-                                aplicações horizontais e verticais em redes de cabeamento estruturadas para
-                                conectar a saída do usuário ao painel de administração ou para interconectar os
-                                painéis de administração. Sua aplicação está focada nas atuais redes de dados
-                                Gigabit Ethenet.
-                            </p>
-                            <div class="more-text">
-                                <h4>Aplicações:</h4>
-                                <ul>
-                                    <li>FAST ETHERNET 100BASE-TX</li>
-                                    <li>GIGABIT ETHERNET 1000BASE-T</li>
-                                    <li>TOKEN RING (100 Mbps)</li>
-                                    <li>ATM LAN (155 & 622 Mbps)</li>
-                                    <li>ISDN</li>
-                                    <li>POE - POWER OVER ETHERNET</li>
-                                    <li>POE+ - POWER OVER ETHERNET PLUS</li>
-                                    <li>Comunicação analógica e digital para vídeo e voz</li>
-                                </ul>
-
-                                <h4>Construção:</h4>
-                                <ul>
-                                    <li>Categoria 6 U/UTP</li>
-                                    <li>PVC CM ou LSZH</li>
-                                    <li>4 pares trançados, padrão de cores Azul/Azul Claro, Laranja/Branco, Verde/Verde Claro, Marrom/Marrom Claro</li>
-                                    <li>23 AWG</li>
-                                    <li>Cobre nu com isolação em polietileno termoplástico de alta densidade</li>
-                                    <li>Disponibilidade das cores: Azul, Vermelho, Cinza, Preto, Branco, Amarelo e Verde (outras cores sob consulta)</li>
-                                    <li>Elemento central (cross filler) garantindo geometria e performance, mantém a equidistância dos pares e reduz perda de performance nas curvaturas</li>
-                                </ul>
-
-                                <h4>Instalação:</h4>
-                                <ul>
-                                    <li>Ambiente interno - não agressivo</li>
-                                </ul>
-
-                                <h4>Normas Aplicáveis:</h4>
-                                <ul>
-                                    <li><b>Internacionais:</b> Diretiva RoHS (produto em conformidade com restrições ao uso de metais pesados, preservação do meio ambiente)</li>
-                                    <li><b>Nacionais:</b> ABNT NBR 14565, ABNT NBR 14703, ABNT NBR 14705</li>
-                                </ul>
-
-                                <h4>Certificações:</h4>
-                                <ul>
-                                    <li>UL Listed</li>
-                                    <li>ANATEL</li>
-                                </ul>
-
-                                <h4>Embalagem:</h4>
-                                <ul>
-                                    <li>Caixa de 305m</li>
-                                </ul>
-
-                                <h4>Gravação:</h4>
-                                <p>
-                                    NEXANS CABLE CATEGORY 6 U/UTP 23AWG 4PAIRS x RoHS COMPLIANT 75C ANSI/TIA 568.2-D "SEMANA/ANO" "1 a 305 m" ANATEL yyyyy-yy-yyyyy<br>
-                                    <b>x:</b> CM | LSZH<br>
-                                    <b>yyyyy-yy-yyyyy CM:</b> 02081-11-05519<br>
-                                    <b>yyyyy-yy-yyyyy LSZH:</b> 02088-11-05519
-                                </p>
-
-                                <h4>Garantia:</h4>
-                                <p>02 anos (Consultar programa de garantia estendida de 25 anos)</p>
+                    <div class="logos-fabricantes" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                        <div class="marca-item">
+                            <div class="marca-logo">
+                                <img src="images/nexans.png" alt="Nexans Logo">
                             </div>
-                            
-                            <button class="ler-mais">Ler mais</button>
                         </div>
-                    </div>
-
-
-                    <div class="produto-item">
-                        <div class="produto-img">
-                            <img src="imagens-produtos/cabeamento-metalico/cat6a.png" alt="Cabo Cat6a">
-                        </div>
-                        <div class="produto-info">
-                            <h3>Cabo Cat6a</h3>
-                            <p>
-                                A linha de cabos CAT6A é a oferta de largura de banda de 500MHz para as aplicações
-                                classe EA até 10Gbits. A linha é composta de cabos concebidos especificamente para
-                                apoiar as frequências mais altas necessárias para 10 Gigabit Ethernet, enquanto mantém
-                                a compatibilidade com as necessidades atuais. Todos os produtos CAT6A são cabos blindados
-                                com folha de alumínio global, garantindo imunidade a interferências externas.
-                            </p>
-                            <div class="more-text">
-                                <h4>Aplicação:</h4>
-                                <ul>
-                                    <li>10Base-T Ethernet</li>
-                                    <li>100Base-TX Fast Ethernet</li>
-                                    <li>1000Base-TX Gigabit Ethernet</li>
-                                    <li>10GBase-T 10 Gigabit Ethernet IEEE 802.3</li>
-                                    <li>155 Mbit ATM</li>
-                                    <li>1.2 Gbit ATM</li>
-                                    <li>Futura aplicação Cat 6A e Class EA</li>
-                                </ul>
-
-                                <h4>Construção:</h4>
-                                <ul>
-                                    <li>Categoria 6A F/UTP</li>
-                                    <li>Capa do cabo LSZH</li>
-                                    <li>23 AWG</li>
-                                    <li>Condutores de cobre nus isolados em polietileno termoplástico de alta densidade</li>
-                                    <li>Folha de alumínio voltada para o exterior para fácil contato em massa com o conector</li>
-                                    <li>Disponível em cinza</li>
-                                    <li>Cabo com crossfiler que mantém a equidistância dos pares e reduz perda de desempenho nas curvas</li>
-                                </ul>
-
-                                <h4>Desempenho:</h4>
-                                <p>
-                                    Com desempenho garantido a 500MHz, os cabos Nexans CAT6A fornecem largura de banda
-                                    superior às exigências da Categoria 6A. Com conectores e patch cords Nexans CAT6A,
-                                    o sistema suporta aplicações 10GBase-T conforme IEEE 802.3an, atendendo normas de
-                                    canal e permanente link Classe EA. Ideal para aplicações Ethernet até 100m. Em
-                                    aplicações PoE e PoE+, a tensão nos pares pode ser de 48V.
-                                </p>
-
-                                <h4>Instalação:</h4>
-                                <ul>
-                                    <li>Ambiente interno - não agressivo</li>
-                                </ul>
-
-                                <h4>Certificação:</h4>
-                                <ul>
-                                    <li>UL Listed</li>
-                                    <li>ANATEL</li>
-                                    <li>ETL Verified 4 connections</li>
-                                    <li>Delta (Product Certificate)</li>
-                                </ul>
-
-                                <h4>Normas Aplicáveis:</h4>
-                                <ul>
-                                    <li><b>Internacional:</b> Diretiva RoHS (conformidade com restrições ao uso de metais pesados e preservação do meio ambiente)</li>
-                                    <li><b>Nacionais:</b> ABNT NBR 14565, ABNT NBR 14703, ABNT NBR 14705</li>
-                                </ul>
-
-                                <h4>Garantia:</h4>
-                                <p>2 anos (Consultar nosso programa de garantia estendida de 25 anos)</p>
+                        <div class="marca-item">
+                            <div class="marca-logo">
+                                <img src="images/mptcable.png" alt="MPT Cable Logo">
                             </div>
-                            
-                            <button class="ler-mais">Ler mais</button>
                         </div>
-                    </div>
-
-
-                    <div class="produto-item">
-                        <div class="produto-img">
-                            <img src="imagens-produtos/cabeamento-metalico/caboblindado.png" alt="Cabo Blindado">
-                        </div>
-                        <div class="produto-info">
-                            <h3>Cabo Blindado</h3>
-                            <p>
-                                Cabo constituído por condutores de cobre sólido com isolação em termoplástico, torcidos em pares, núcleo protegido por uma blindagem aluminizada e um revestimento externo de material PVC retardante à chama para uso interno e externo.
-                            </p>
-                            <div class="more-text">
-                                <h4>Aplicações e uso:</h4>
-                                <p>
-                                    Desenvolvido para instalação interna e externa horizontal, para aplicações:
-                                </p>
-                                <ul>
-                                    <li>FAST ETHERNET (100BASE-TX, 100BASE-T4)</li>
-                                    <li>GIGABIT ETHERNET (1000BASE-T)</li>
-                                    <li>ATM - 155 (UTP)</li>
-                                    <li>10BASE-T</li>
-                                    <li>TOKEN RING</li>
-                                </ul>
-                                <p>
-                                    Cabo em conformidade com a diretiva RoHS.<br>
-                                    Indicado para aplicações em tubulações com muita ocupação, locais sem fluxo de ar forçado, instalações em ambiente comum ou em locais com condições de propagação de fogo similares a estas.
-                                </p>
-
-                                <h4>Construção:</h4>
-                                <ul>
-                                    <li>Conjunto constituído por condutores de cobre sólido de alta pureza, bitola 24AWG</li>
-                                    <li>Condutores de cobre isolados individualmente com Polietileno de alta densidade PEAD, com características elétricas especiais e cores distintas para identificação</li>
-                                    <li>Veias são torcidas em pares com passos de binagem calculados para reduzir o desacoplamento e melhorar a transmissão, sendo protegidas por blindagem em fita aluminizada e condutor dreno formando o núcleo do cabo</li>
-                                    <li>Revestimento externo em material PVC retardante à chama, com aditivos que garantem resistência a intempéries, proteção contra raios UV e impedância característica, uso interno e externo</li>
-                                </ul>
-
-                                <h4>Capacidade:</h4>
-                                <ul>
-                                    <li>Os cabos possuem 4 pares</li>
-                                </ul>
-
-                                <h4>Categoria de transmissão:</h4>
-                                <p>
-                                    Cabos F/UTP Cat 5e, com características de transmissão verificada até 100MHz.
-                                </p>
-
-                                <h4>Normas, Especificações e Performance:</h4>
-                                <ul>
-                                    <li>ANSI/TIA-568.2-D</li>
-                                    <li>ANATEL - Requisitos técnicos Categoria 1</li>
-                                    <li>Cabo com blindagem categoria 5e F/UTP, condutor sólido, para transmissão de 100MHz interno e externo</li>
-                                    <li>ABNT NBR 14703, 14705, 14565</li>
-                                    <li>ABNT IEC 60332-3-25</li>
-                                    <li>ISO/IEC 11801</li>
-                                </ul>
+                        <div class="marca-item">
+                            <div class="marca-logo">
+                                <img src="images/wec.png" alt="WEC Logo">
                             </div>
-                            
-                            <button class="ler-mais">Ler mais</button>
+                        </div>
+                        <div class="marca-item">
+                            <div class="marca-logo">
+                                <img src="images/prysmian.png" alt="Prysmian Logo">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -371,17 +162,17 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" aria-label="Rodapé do site com informações de contato e navegação">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img-footer">
                     <p>Tecnologia de ponta para redes seguras e eficientes.</p>
                     <div class="footer-social">
-                        <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram">
+                        <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram da ABC LAN">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook">
+                        <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook da ABC LAN">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
@@ -406,7 +197,7 @@
                         <li><i class="fas fa-envelope"></i> comercial@abclan.com.br</li>
                         <li><i class="fas fa-envelope"></i> abclantelecom@gmail.com</li>
                         <li><i class="fas fa-map-marker-alt"></i><u>
-                            <a href="https://www.google.com/maps/place/Av.+Utinga,+1586+-+Utinga,+Santo+André+-+SP,+09220-611" target="_blank" rel="noopener"> Av. Utinga, 1586 - Utinga, Santo André - SP</u></a></li>
+                            <a href="https://www.google.com/maps/place/Av.+Utinga,+1586+-+Utinga,+Santo+André+-+SP,+09220-611" target="_blank" rel="noopener" aria-label="Ver localização da ABC LAN no Google Maps"> Av. Utinga, 1586 - Utinga, Santo André - SP</u></a></li>
                     </ul>
                 </div>
 
@@ -421,8 +212,9 @@
                 <div class="footer-bandeiras">
                         <img src="images/visa.png" alt="Visa" class="logo-visa">
                         <img src="images/mastercard.png" alt="MasterCard" class="logo-master">
-                        <img src="images/PIX.png" alt="Pix" class="logo-pix">
-                        <img src="images/BNDES.png" alt="BNDES" class="logo-bndes">
+                        <img src="images/pix.png" alt="Pix" class="logo-pix">
+                        <img src="images/bndes.png" alt="BNDES" class="logo-bndes">
+                        <img src="images/barcode.png" alt="Barcode" class="logo-barcode">
                 </div>
             </div>
 
@@ -433,20 +225,14 @@
     </footer>
 
     <!-- Whatsapp Botão -->
-    <div class="whatsapp-container">
+    <div class="whatsapp-container" aria-label="Botão de acesso ao WhatsApp">
         <a class="whatsapp-btn" id="whatsappToggle" aria-label="Abrir opções de WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <div class="whatsapp-menu" id="whatsappMenu">
-            <a href="https://wa.me/5511940272784" target="_blank">📞 Suporte</a>
-            <a href="https://wa.me/5511940752234" target="_blank">📞 Comercial</a>
+        <div class="whatsapp-menu" id="whatsappMenu" aria-label="Menu com contatos de suporte e comercial no WhatsApp">
+            <a href="https://wa.me/5511940272784" target="_blank" aria-label="Falar com Suporte via WhatsApp">📞 Suporte</a>
+            <a href="https://wa.me/5511940752234" target="_blank" aria-label="Falar com Comercial via WhatsApp">📞 Comercial</a>
         </div>
-    </div>
-
-    <!-- Modal para Zoom -->
-    <div id="zoom-modal" class="zoom-modal">
-        <span class="close-modal">&times;</span>
-        <img class="zoom-modal-content" id="zoom-image">
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js" defer></script>

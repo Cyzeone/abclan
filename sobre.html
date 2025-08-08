@@ -29,20 +29,20 @@
 <body>
     <div class="site-wrapper">
         <!-- Header -->
-        <header class="header">
+        <header class="header" aria-label="Cabeçalho do site">
             <div class="header-top">
                 <div class="container">
                     <div class="header-info">
                         <div class="contact-info">
-                            <span><i class="fas fa-phone"></i> (11) 4477-2277</span>
-                            <span><i class="fas fa-envelope"></i> comercial@abclan.com.br</span>
-                            <span><i class="fas fa-clock"></i> Segunda à Sexta - 8h30 às 18h</span>
+                            <span aria-label="Telefone"><i class="fas fa-phone"></i> (11) 4477-2277</span>
+                            <span aria-label="E-mail comercial"><i class="fas fa-envelope"></i> comercial@abclan.com.br</span>
+                            <span aria-label="Horário de funcionamento"><i class="fas fa-clock"></i> Segunda à Sexta - 8h30 às 18h</span>
                         </div>
                         <div class="social-links">
-                            <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram">
+                            <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram da ABCLAN">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook">
+                            <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook da ABCLAN">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </div>
@@ -50,31 +50,33 @@
                 </div>
             </div>
 
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Menu de navegação principal">
                 <div class="container">
                     <div class="nav-brand">
-                        <a href="index.html"><img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img"></a>
+                        <a href="index.html" aria-label="Voltar para a Home">
+                            <img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img">
+                        </a>
                     </div>
 
                     <ul class="nav-menu">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
-                        
+                        <li><a href="index.html" class="nav-link" aria-label="Ir para Home">Home</a></li>
+                        <li><a href="sobre.html" class="nav-link" aria-label="Ir para Sobre Nós">Sobre Nós</a></li>
+
                         <li class="has-submenu">
-                            <a href="index.html#servicos" class="nav-link">Produtos</a>
+                            <a href="index.html#servicos" class="nav-link" aria-label="Ver produtos">Produtos</a>
                             <ul class="submenu">
-                                <li><a href="cabeamentometalico.html" class="nav-link">Cabeamento Metálico</a></li>
-                                <li><a href="cabos.html" class="nav-link">Cabeamento Óptico</a></li>
-                                <li><a href="ativos.html" class="nav-link">Ativos</a></li>
-                                <li><a href="racks.html" class="nav-link">Racks e Acessórios</a></li>
+                                <li><a href="cabeamentometalico.html" class="nav-link" aria-label="Cabeamento Metálico">Cabeamento Metálico</a></li>
+                                <li><a href="cabos.html" class="nav-link" aria-label="Cabeamento Óptico">Cabeamento Óptico</a></li>
+                                <li><a href="ativos.html" class="nav-link" aria-label="Ativos">Ativos</a></li>
+                                <li><a href="racks.html" class="nav-link" aria-label="Racks e Acessórios">Racks e Acessórios</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="contato.html" class="nav-link">Contato</a></li>
-                        <li><a href="solicitarorcamento.html" class="nav-link btn-orcamento">Orçamento</a></li>
+                        <li><a href="contato.html" class="nav-link" aria-label="Ir para Contato">Contato</a></li>
+                        <li><a href="solicitarorcamento.html" class="nav-link btn-orcamento" aria-label="Solicitar Orçamento">Orçamento</a></li>
                     </ul>
 
-                    <div class="hamburguer">
+                    <div class="hamburguer" aria-label="Botão para abrir o menu responsivo" role="button" tabindex="0">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -84,7 +86,7 @@
         </header>
 
         <!-- Sobre a Empresa -->
-        <section id="sobre" class="sobre">
+        <section id="sobre" class="sobre" aria-label="Seção Sobre a Empresa ABC LAN">
             <div class="sobre-container">
                 <div class="section-header">
                     <h2 class="section-title">Sobre a ABC LAN</h2>
@@ -92,33 +94,37 @@
                 </div>
 
                 <div class="sobre-content">
-                    <div class="sobre-text">
+                    <div class="sobre-text" aria-label="Informações sobre a empresa">
                         <h3>Quem somos</h3>
-                        <p>A ABCLAN é uma distribuidora especializada em soluções tecnológicas para telecomunicações, oferecendo produtos e serviços de alta qualidade para
-                        empresas e profissionais do setor.</p>
-                        
-                        <p>Com anos de experiência no mercado, nos consolidamos como referência na distribuição de materiais para cabeamento estruturado, sistemas de CFTV,
-                        telecomunicações e informática.</p>
+                        <p>
+                            A ABCLAN é uma distribuidora especializada em soluções tecnológicas para telecomunicações, 
+                            oferecendo produtos e serviços de alta qualidade para empresas e profissionais do setor.
+                        </p>
 
-                        <div class="sobre-stats">
-                            <div class="stat-item">
+                        <p>
+                            Com anos de experiência no mercado, nos consolidamos como referência na distribuição de materiais 
+                            para cabeamento estruturado, sistemas de CFTV, telecomunicações e informática.
+                        </p>
+
+                        <div class="sobre-stats" aria-label="Indicadores de experiência e parceria">
+                            <div class="stat-item" aria-label="Mais de 20 anos de experiência">
                                 <h4>20+</h4>
                                 <p>Anos de Experiência</p>
                             </div>
-                            <div class="stat-item">
+                            <div class="stat-item" aria-label="Mais de 1000 clientes atendidos">
                                 <h4>1000+</h4>
                                 <p>Clientes Atendidos</p>
                             </div>
-                            <div class="stat-item">
+                            <div class="stat-item" aria-label="Mais de 10 marcas parceiras">
                                 <h4>10+</h4>
                                 <p>Marcas Parceiras</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="sobre-image">
+                    <div class="sobre-image" aria-label="Imagem ilustrativa sobre tecnologia e inovação">
                         <div class="image-placeholder">
-                            <i class="fas fa-network-wired"></i>
+                            <i class="fas fa-network-wired" aria-hidden="true"></i>
                             <p>Tecnologia e Inovação</p>
                         </div>
                     </div>
@@ -128,17 +134,17 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" aria-label="Rodapé do site com informações de contato e navegação">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img-footer">
                     <p>Tecnologia de ponta para redes seguras e eficientes.</p>
                     <div class="footer-social">
-                        <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram">
+                        <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram da ABC LAN">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook">
+                        <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook da ABC LAN">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
@@ -163,7 +169,7 @@
                         <li><i class="fas fa-envelope"></i> comercial@abclan.com.br</li>
                         <li><i class="fas fa-envelope"></i> abclantelecom@gmail.com</li>
                         <li><i class="fas fa-map-marker-alt"></i><u>
-                            <a href="https://www.google.com/maps/place/Av.+Utinga,+1586+-+Utinga,+Santo+André+-+SP,+09220-611" target="_blank" rel="noopener"> Av. Utinga, 1586 - Utinga, Santo André - SP</u></a></li>
+                            <a href="https://www.google.com/maps/place/Av.+Utinga,+1586+-+Utinga,+Santo+André+-+SP,+09220-611" target="_blank" rel="noopener" aria-label="Ver localização da ABC LAN no Google Maps"> Av. Utinga, 1586 - Utinga, Santo André - SP</u></a></li>
                     </ul>
                 </div>
 
@@ -178,8 +184,9 @@
                 <div class="footer-bandeiras">
                         <img src="images/visa.png" alt="Visa" class="logo-visa">
                         <img src="images/mastercard.png" alt="MasterCard" class="logo-master">
-                        <img src="images/PIX.png" alt="Pix" class="logo-pix">
-                        <img src="images/BNDES.png" alt="BNDES" class="logo-bndes">
+                        <img src="images/pix.png" alt="Pix" class="logo-pix">
+                        <img src="images/bndes.png" alt="BNDES" class="logo-bndes">
+                        <img src="images/barcode.png" alt="Barcode" class="logo-barcode">
                 </div>
             </div>
 
@@ -190,13 +197,13 @@
     </footer>
 
     <!-- Whatsapp Botão -->
-    <div class="whatsapp-container">
+    <div class="whatsapp-container" aria-label="Botão de acesso ao WhatsApp">
         <a class="whatsapp-btn" id="whatsappToggle" aria-label="Abrir opções de WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <div class="whatsapp-menu" id="whatsappMenu">
-            <a href="https://wa.me/5511940272784" target="_blank">📞 Suporte</a>
-            <a href="https://wa.me/5511940752234" target="_blank">📞 Comercial</a>
+        <div class="whatsapp-menu" id="whatsappMenu" aria-label="Menu com contatos de suporte e comercial no WhatsApp">
+            <a href="https://wa.me/5511940272784" target="_blank" aria-label="Falar com Suporte via WhatsApp">📞 Suporte</a>
+            <a href="https://wa.me/5511940752234" target="_blank" aria-label="Falar com Comercial via WhatsApp">📞 Comercial</a>
         </div>
     </div>
 

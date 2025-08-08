@@ -29,20 +29,20 @@
 <body>
     <div class="site-wrapper">
         <!-- Header -->
-        <header class="header">
+        <header class="header" aria-label="Cabeçalho do site">
             <div class="header-top">
                 <div class="container">
                     <div class="header-info">
                         <div class="contact-info">
-                            <span><i class="fas fa-phone"></i> (11) 4477-2277</span>
-                            <span><i class="fas fa-envelope"></i> comercial@abclan.com.br</span>
-                            <span><i class="fas fa-clock"></i> Segunda à Sexta - 8h30 às 18h</span>
+                            <span aria-label="Telefone"><i class="fas fa-phone"></i> (11) 4477-2277</span>
+                            <span aria-label="E-mail comercial"><i class="fas fa-envelope"></i> comercial@abclan.com.br</span>
+                            <span aria-label="Horário de funcionamento"><i class="fas fa-clock"></i> Segunda à Sexta - 8h30 às 18h</span>
                         </div>
                         <div class="social-links">
-                            <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram">
+                            <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram da ABCLAN">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook">
+                            <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook da ABCLAN">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </div>
@@ -50,31 +50,33 @@
                 </div>
             </div>
 
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Menu de navegação principal">
                 <div class="container">
                     <div class="nav-brand">
-                        <a href="index.html"><img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img"></a>
+                        <a href="index.html" aria-label="Voltar para a Home">
+                            <img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img">
+                        </a>
                     </div>
 
                     <ul class="nav-menu">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
-                        
+                        <li><a href="index.html" class="nav-link" aria-label="Ir para Home">Home</a></li>
+                        <li><a href="sobre.html" class="nav-link" aria-label="Ir para Sobre Nós">Sobre Nós</a></li>
+
                         <li class="has-submenu">
-                            <a href="index.html#servicos" class="nav-link">Produtos</a>
+                            <a href="index.html#servicos" class="nav-link" aria-label="Ver produtos">Produtos</a>
                             <ul class="submenu">
-                                <li><a href="cabeamentometalico.html" class="nav-link">Cabeamento Metálico</a></li>
-                                <li><a href="cabos.html" class="nav-link">Cabeamento Óptico</a></li>
-                                <li><a href="ativos.html" class="nav-link">Ativos</a></li>
-                                <li><a href="racks.html" class="nav-link">Racks e Acessórios</a></li>
+                                <li><a href="cabeamentometalico.html" class="nav-link" aria-label="Cabeamento Metálico">Cabeamento Metálico</a></li>
+                                <li><a href="cabos.html" class="nav-link" aria-label="Cabeamento Óptico">Cabeamento Óptico</a></li>
+                                <li><a href="ativos.html" class="nav-link" aria-label="Ativos">Ativos</a></li>
+                                <li><a href="racks.html" class="nav-link" aria-label="Racks e Acessórios">Racks e Acessórios</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="contato.html" class="nav-link">Contato</a></li>
-                        <li><a href="solicitarorcamento.html" class="nav-link btn-orcamento">Orçamento</a></li>
+                        <li><a href="contato.html" class="nav-link" aria-label="Ir para Contato">Contato</a></li>
+                        <li><a href="solicitarorcamento.html" class="nav-link btn-orcamento" aria-label="Solicitar Orçamento">Orçamento</a></li>
                     </ul>
 
-                    <div class="hamburguer">
+                    <div class="hamburguer" aria-label="Botão para abrir o menu responsivo" role="button" tabindex="0">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -88,112 +90,44 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Ativos</h2>
-                    <p class="section-subtitle">Conheça nossos produtos</p>
+                    <p class="section-subtitle">Conheça nossos produtos e fabricantes</p>
                 </div>
 
-                <div class="lista-produtos">
-
+                <div class="galeria-produtos" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 60px;">
                     <div class="produto-item">
-                        <div class="produto-img">
-                            <img src="" alt="Switch">
-                        </div>
-                        <div class="produto-info">
-                            <h3>Switch</h3>
-                            <p>
-                                Descrição de exemplo
-                            </p>
-                            <div class="more-text">
-                                <h4>Informação de exemplo:</h4>
-                                
-                                <!-- Informações adicionais 
+                        <img src="imagens-produtos/ativos/switch.png" alt="Switch">
+                        <p class="produto-nome">Switch</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="imagens-produtos/ativos/nobreak.png" alt="Nobreak">
+                        <p class="produto-nome">Nobreak</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="imagens-produtos/ativos/gbic.png" alt="Mini-Gbic">
+                        <p class="produto-nome">Mini-Gbic</p>
+                    </div>
+                    <div class="produto-item">
+                        <img src="imagens-produtos/ativos/conversordemidia.png" alt="Conversor de Mídia">
+                        <p class="produto-nome">Conversor de Mídia</p>
+                    </div>
+                </div>
 
-                                <h4>Tubo loose:</h4>
-                                <ul>
-                                    <li>Tecnologia tubo loose (PBT) impregnados por gel de petróleo, hidrófugo contendo até 12 fibras ópticas.</li>
-                                </ul>
-
-                                <h4>Proteção contra umidade:</h4>
-                                <ul>
-                                    <li>O tubo é protegido contra umidade com um composto geleado hidrófugo.</li>
-                                </ul>
-
-                                <h4>Elementos de tração:</h4>
-                                <ul>
-                                    <li>Fios de fibra de vidro.</li>
-                                </ul>
-
-                                <h4>Capa externa:</h4>
-                                <ul>
-                                    <li>Capa externa em termoplástico, retardante à chama (COG), resistente a intempéries e a raios UV e com fio de rasgamento.</li>
-                                </ul>
-                            </div>
-                                
-                                -->
-
-                            </div>
-
-                            <button class="ler-mais">Ler mais</button>
-                        </div>
+                <div class="fabricantes-marcas">
+                    <div class="section-header">
+                        <h2 class="section-title">Fabricantes Parceiros</h2>
+                        <p class="section-subtitle">Marcas responsáveis pelos produtos exibidos acima</p>
                     </div>
 
-                    <div class="produto-item">
-                        <div class="produto-img">
-                            <img src="" alt="Nobreaks">
-                        </div>
-                        <div class="produto-info">
-                            <h3>Nobreaks</h3>
-                            <p>
-                                Descrição de exemplo
-                            </p>
-                            <div class="more-text">
-                                <h4>Informação de exemplo:</h4>
-
-                                <!-- Informações adicionais -->
-                                
+                    <div class="logos-fabricantes" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                        <div class="marca-item">
+                            <div class="marca-logo">
+                                <img src="images/planet.png" alt="Planet Logo">
                             </div>
-
-                            <button class="ler-mais">Ler mais</button>
                         </div>
-                    </div>
-
-                    <div class="produto-item">
-                        <div class="produto-img">
-                            <img src="" alt="Estabilizadores">
-                        </div>
-                        <div class="produto-info">
-                            <h3>Estabilizadores</h3>
-                            <p>
-                                Descrição de exemplo
-                            </p>
-                            <div class="more-text">
-                                <h4>Informação de exemplo:</h4>
-
-                                <!-- Informações adicionais -->
-                                
+                        <div class="marca-item">
+                            <div class="marca-logo">
+                                <img src="images/tplink.png" alt="TP-Link Logo">
                             </div>
-                            
-                            <button class="ler-mais">Ler mais</button>
-                        </div>
-                    </div>
-
-
-                    <div class="produto-item">
-                        <div class="produto-img">
-                            <img src="" alt="Conversores de Mídia">
-                        </div>
-                        <div class="produto-info">
-                            <h3>Conversores de Mídia</h3>
-                            <p>
-                                Descrição de exemplo
-                            </p>
-                            <div class="more-text">
-                                <h4>Informação de exemplo:</h4>
-
-                                <!-- Informações adicionais -->
-                                
-                            </div>
-                            
-                            <button class="ler-mais">Ler mais</button>
                         </div>
                     </div>
                 </div>
@@ -202,17 +136,17 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" aria-label="Rodapé do site com informações de contato e navegação">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img-footer">
                     <p>Tecnologia de ponta para redes seguras e eficientes.</p>
                     <div class="footer-social">
-                        <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram">
+                        <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram da ABC LAN">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook">
+                        <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook da ABC LAN">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
@@ -237,7 +171,7 @@
                         <li><i class="fas fa-envelope"></i> comercial@abclan.com.br</li>
                         <li><i class="fas fa-envelope"></i> abclantelecom@gmail.com</li>
                         <li><i class="fas fa-map-marker-alt"></i><u>
-                            <a href="https://www.google.com/maps/place/Av.+Utinga,+1586+-+Utinga,+Santo+André+-+SP,+09220-611" target="_blank" rel="noopener"> Av. Utinga, 1586 - Utinga, Santo André - SP</u></a></li>
+                            <a href="https://www.google.com/maps/place/Av.+Utinga,+1586+-+Utinga,+Santo+André+-+SP,+09220-611" target="_blank" rel="noopener" aria-label="Ver localização da ABC LAN no Google Maps"> Av. Utinga, 1586 - Utinga, Santo André - SP</u></a></li>
                     </ul>
                 </div>
 
@@ -252,8 +186,9 @@
                 <div class="footer-bandeiras">
                         <img src="images/visa.png" alt="Visa" class="logo-visa">
                         <img src="images/mastercard.png" alt="MasterCard" class="logo-master">
-                        <img src="images/PIX.png" alt="Pix" class="logo-pix">
-                        <img src="images/BNDES.png" alt="BNDES" class="logo-bndes">
+                        <img src="images/pix.png" alt="Pix" class="logo-pix">
+                        <img src="images/bndes.png" alt="BNDES" class="logo-bndes">
+                        <img src="images/barcode.png" alt="Barcode" class="logo-barcode">
                 </div>
             </div>
 
@@ -264,20 +199,14 @@
     </footer>
 
     <!-- Whatsapp Botão -->
-    <div class="whatsapp-container">
+    <div class="whatsapp-container" aria-label="Botão de acesso ao WhatsApp">
         <a class="whatsapp-btn" id="whatsappToggle" aria-label="Abrir opções de WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <div class="whatsapp-menu" id="whatsappMenu">
-            <a href="https://wa.me/5511940272784" target="_blank">📞 Suporte</a>
-            <a href="https://wa.me/5511940752234" target="_blank">📞 Comercial</a>
+        <div class="whatsapp-menu" id="whatsappMenu" aria-label="Menu com contatos de suporte e comercial no WhatsApp">
+            <a href="https://wa.me/5511940272784" target="_blank" aria-label="Falar com Suporte via WhatsApp">📞 Suporte</a>
+            <a href="https://wa.me/5511940752234" target="_blank" aria-label="Falar com Comercial via WhatsApp">📞 Comercial</a>
         </div>
-    </div>
-
-    <!-- Modal para Zoom -->
-    <div id="zoom-modal" class="zoom-modal">
-        <span class="close-modal">&times;</span>
-        <img class="zoom-modal-content" id="zoom-image">
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js" defer></script>

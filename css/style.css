@@ -667,6 +667,13 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
 }
 
+.section-instruction {
+    font-size: 15px;
+    color: #ffffffc6; 
+    margin-top: 5px;
+    text-align: center;
+}
+
 .servicos-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1091,6 +1098,10 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-2px);
 }
 
+.footer-social a:hover i {
+    color: #000; /* ícone preto no hover */
+}
+
 .footer-bottom {
     border-top: 1px solid #2d3748;
     padding-top: 20px;
@@ -1184,23 +1195,28 @@ h1, h2, h3, h4, h5, h6 {
 .footer-bandeiras img {
     object-fit: contain;
     transition: transform 0.3s ease;
+    filter: brightness(0) invert(1); /* <- Torna a imagem branca */
 }
 
 /* Ajustes por logo */
 .logo-visa {
-    height: 50px;
+    height: 55px;
 }
 
 .logo-master {
-    height: 30px;
+    height: 40px;
 }
 
 .logo-pix {
-    height: 22px;
+    height: 35px;
 }
 
 .logo-bndes {
-    height: 25px;
+    height: 20px;
+}
+
+.logo-barcode {
+    height: 35px;
 }
 
 .footer-bandeiras img:hover {
@@ -1443,6 +1459,50 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
+/* Garante que todos os containers respeitem a largura da tela */
+.container {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+/* Imagens dos fabricantes */
+.logos-fabricantes img {
+    width: 100px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Imagens dos produtos */
+.galeria-produtos img {
+    width: 280px;
+    height: 280px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Container do item */
+.produto-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* garante que a imagem fique em cima e o texto embaixo */
+    align-items: center;
+    }
+
+/* Nome do produto */
+.produto-nome {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.logos-fabricantes .marca-item {
+    cursor: default; /* remove o cursor de "grabbing" */
+}
+
 /* CSS Outline */
 
 a:focus {
@@ -1451,14 +1511,6 @@ a:focus {
 
 .ler-mais:focus {
     outline: none !important;
-}
-
-/* Garante que todos os containers respeitem a largura da tela */
-.container {
-    max-width: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0 20px;
 }
 
 /* TELAS MUITO PEQUENAS */
@@ -1671,13 +1723,6 @@ a:focus {
     .footer-section h4 {
         text-align: left;
         margin-left: 0;
-    }
-
-    .footer-bandeiras {
-        order: unset; /* só por segurança */
-        grid-column: 1 / -1; /* força ocupar linha inteira */
-        margin-top: 10px;
-        justify-content: center; /* centraliza as bandeiras */
     }
 
     .whatsapp-btn {
@@ -1910,13 +1955,6 @@ a:focus {
         margin-left: 0;
     }
 
-    .footer-bandeiras {
-        order: unset; /* só por segurança */
-        grid-column: 1 / -1; /* força ocupar linha inteira */
-        margin-top: 10px;
-        justify-content: center; /* centraliza as bandeiras */
-    }
-
     .whatsapp-btn {
         bottom: 20px;
         right: 20px;
@@ -2147,13 +2185,6 @@ a:focus {
         text-align: left;
     }
 
-    .footer-bandeiras {
-        order: unset; /* só por segurança */
-        grid-column: 1 / -1; /* força ocupar linha inteira */
-        margin-top: 10px;
-        justify-content: center; /* centraliza as bandeiras */
-    }
-
     .whatsapp-btn {
         bottom: 20px;
         right: 20px;
@@ -2371,7 +2402,7 @@ a:focus {
 
 /* Evita que o dropdown ultrapasse em resoluções menores */
 @media screen and (max-width: 1024px) {
-  .select-wrapper {
+    .select-wrapper {
         overflow-x: hidden;
   }
 }
@@ -2389,10 +2420,21 @@ a:focus {
   }
 }
 
-/*
-body::after {
-    content: 'debug';
-    display: block;
-    background: red;
-    height: 5px;
+@media (min-width: 300px) and (max-width: 899px) {
+    .footer-bandeiras {
+        position: static;       /* tira o absolute para não travar posição */
+        margin: 10px auto 0;    /* margem top 10px e centraliza horizontal com auto */
+        justify-content: center; /* centraliza as imagens dentro do flex */
+        left: auto;             /* remove deslocamento à esquerda */
+        bottom: auto;           /* remove distância do fundo */
+        display: flex;          /* mantém o flex */
+        gap: 12px;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: fit-content;     /* o container fica do tamanho das imagens */
+  }
 }
+
+
+
+

@@ -29,20 +29,20 @@
 <body>
     <div class="site-wrapper">
         <!-- Header -->
-        <header class="header">
+        <header class="header" aria-label="Cabeçalho do site">
             <div class="header-top">
                 <div class="container">
                     <div class="header-info">
                         <div class="contact-info">
-                            <span><i class="fas fa-phone"></i> (11) 4477-2277</span>
-                            <span><i class="fas fa-envelope"></i> comercial@abclan.com.br</span>
-                            <span><i class="fas fa-clock"></i> Segunda à Sexta - 8h30 às 18h</span>
+                            <span aria-label="Telefone"><i class="fas fa-phone"></i> (11) 4477-2277</span>
+                            <span aria-label="E-mail comercial"><i class="fas fa-envelope"></i> comercial@abclan.com.br</span>
+                            <span aria-label="Horário de funcionamento"><i class="fas fa-clock"></i> Segunda à Sexta - 8h30 às 18h</span>
                         </div>
                         <div class="social-links">
-                            <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram">
+                            <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram da ABCLAN">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook">
+                            <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook da ABCLAN">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         </div>
@@ -50,31 +50,33 @@
                 </div>
             </div>
 
-            <nav class="navbar">
+            <nav class="navbar" aria-label="Menu de navegação principal">
                 <div class="container">
                     <div class="nav-brand">
-                        <a href="index.html"><img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img"></a>
+                        <a href="index.html" aria-label="Voltar para a Home">
+                            <img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img">
+                        </a>
                     </div>
 
                     <ul class="nav-menu">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="sobre.html" class="nav-link">Sobre Nós</a></li>
-                        
+                        <li><a href="index.html" class="nav-link" aria-label="Ir para Home">Home</a></li>
+                        <li><a href="sobre.html" class="nav-link" aria-label="Ir para Sobre Nós">Sobre Nós</a></li>
+
                         <li class="has-submenu">
-                            <a href="index.html#servicos" class="nav-link">Produtos</a>
+                            <a href="index.html#servicos" class="nav-link" aria-label="Ver produtos">Produtos</a>
                             <ul class="submenu">
-                                <li><a href="cabeamentometalico.html" class="nav-link">Cabeamento Metálico</a></li>
-                                <li><a href="cabos.html" class="nav-link">Cabeamento Óptico</a></li>
-                                <li><a href="ativos.html" class="nav-link">Ativos</a></li>
-                                <li><a href="racks.html" class="nav-link">Racks e Acessórios</a></li>
+                                <li><a href="cabeamentometalico.html" class="nav-link" aria-label="Cabeamento Metálico">Cabeamento Metálico</a></li>
+                                <li><a href="cabos.html" class="nav-link" aria-label="Cabeamento Óptico">Cabeamento Óptico</a></li>
+                                <li><a href="ativos.html" class="nav-link" aria-label="Ativos">Ativos</a></li>
+                                <li><a href="racks.html" class="nav-link" aria-label="Racks e Acessórios">Racks e Acessórios</a></li>
                             </ul>
                         </li>
 
-                        <li><a href="contato.html" class="nav-link">Contato</a></li>
-                        <li><a href="solicitarorcamento.html" class="nav-link btn-orcamento">Orçamento</a></li>
+                        <li><a href="contato.html" class="nav-link" aria-label="Ir para Contato">Contato</a></li>
+                        <li><a href="solicitarorcamento.html" class="nav-link btn-orcamento" aria-label="Solicitar Orçamento">Orçamento</a></li>
                     </ul>
 
-                    <div class="hamburguer">
+                    <div class="hamburguer" aria-label="Botão para abrir o menu responsivo" role="button" tabindex="0">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -84,7 +86,7 @@
         </header>
         
         <!-- Hero Section -->
-        <section id="home" class="hero">
+        <section id="home" class="hero" aria-label="Seção principal do site com destaques">
             <div class="swiper hero-swiper">
                 <div class="swiper-wrapper">
                     <!-- Slide 1 -->
@@ -96,8 +98,8 @@
                                     <h1 class="hero-title">Tecnologia de ponta para redes seguras e eficientes</h1>
                                     <p class="hero-subtitle">Distribuidora especializada em cabeamento estruturado, telecomunicações, CFTV e informática com as melhores marcas do mercado.</p>
                                     <div class="hero-buttons">
-                                        <a href="#servicos" class="btn btn-primary">Nossos Produtos</a>
-                                        <a href="contato.html" class="btn btn-secondary">Fale Conosco</a>
+                                        <a href="#servicos" class="btn btn-primary" aria-label="Ir para nossos produtos">Nossos Produtos</a>
+                                        <a href="contato.html" class="btn btn-secondary" aria-label="Ir para página de contato">Fale Conosco</a>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +115,7 @@
                                     <h1 class="hero-title">Infraestrutura para Cabeamento Estruturado</h1>
                                     <p class="hero-subtitle">Soluções em armazenamento e organização de redes para empresas de todos os tamanhos.</p>
                                     <div class="hero-buttons">
-                                        <a href="racks.html" class="btn btn-primary">Ver Produtos</a>
+                                        <a href="racks.html" class="btn btn-primary" aria-label="Ver produtos de racks">Ver Produtos</a>
                                     </div>
                                 </div>
                             </div>
@@ -129,7 +131,7 @@
                                     <h1 class="hero-title">Cabos Ópticos de Alta Performance</h1>
                                     <p class="hero-subtitle">Alta velocidade e qualidade na transmissão de dados com soluções ópticas modernas.</p>
                                     <div class="hero-buttons">
-                                        <a href="cabos.html" class="btn btn-primary">Ver Produtos</a>
+                                        <a href="cabos.html" class="btn btn-primary" aria-label="Ver produtos de cabos ópticos">Ver Produtos</a>
                                     </div>
                                 </div>
                             </div>
@@ -155,63 +157,20 @@
             </div>
         </section>
 
-        <!-- Sobre Nós
-        <section id="sobre" class="sobre">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Sobre a ABC LAN</h2>
-                    <p class="section-subtitle">Sua parceira em soluções tecnológicas</p>
-                </div>
-
-                <div class="sobre-content">
-                    <div class="sobre-text">
-                        <h3>Quem somos</h3>
-                        <p>A ABCLAN é uma distribuidora especializada em soluções tecnológicas para telecomunicações, oferecendo produtos e serviços de alta qualidade para
-                        empresas e profissionais do setor.</p>
-                        
-                        <p>Com anos de experiência no mercado, nos consolidamos como referência na distribuição de materiais para cabeamento estruturado, sistemas de CFTV,
-                        telecomunicações e informática.</p>
-
-                        <div class="sobre-stats">
-                            <div class="stat-item">
-                                <h4>20+</h4>
-                                <p>Anos de Experiência</p>
-                            </div>
-                            <div class="stat-item">
-                                <h4>1000+</h4>
-                                <p>Clientes Atendidos</p>
-                            </div>
-                            <div class="stat-item">
-                                <h4>10+</h4>
-                                <p>Marcas Parceiras</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sobre-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-network-wired"></i>
-                            <p>Tecnologia e Inovação</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        -->
-
         <!-- Serviços -->
-        <section id="servicos" class="servicos">
+        <section id="servicos" class="servicos" aria-label="Seção com linha de produtos">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title-prod">Linha de Produtos</h2>
                     <p class="section-subtitle-prod">Soluções completas para suas necessidades tecnológicas</p>
+                    <p class="section-instruction">Clique nos cards abaixo para ver os produtos</p>
                 </div>
 
                 <div class="servicos-grid">
 
-                    <a href="cabeamentometalico.html" class="servico-card">
+                    <a href="cabeamentometalico.html" class="servico-card" aria-label="Ver produtos de Cabeamento Metálico">
                         <div class="servico-img">
-                            <img src="images/cabometalico.png" alt="Cabeamento Metálico">
+                            <img src="images/cabometalico.jpg" alt="Cabeamento Metálico">
                         </div>
                         <h3>Cabeamento Metálico</h3>
                         <ul>
@@ -222,7 +181,7 @@
                         </ul>
                     </a>
 
-                    <a href="cabos.html" class="servico-card">
+                    <a href="cabos.html" class="servico-card" aria-label="Ver produtos de Cabeamento Óptico">
                         <div class="servico-img">
                             <img src="images/caboopticoservico.png" alt="Cabeamento Óptico">
                         </div>
@@ -235,7 +194,7 @@
                         </ul>
                     </a>
 
-                    <a href="ativos.html" class="servico-card">
+                    <a href="ativos.html" class="servico-card" aria-label="Ver produtos de Ativos">
                         <div class="servico-img">
                             <img src="images/ativosservicos.png" alt="Ativos">
                         </div>
@@ -248,9 +207,9 @@
                         </ul>
                     </a>
 
-                    <a href="racks.html" class="servico-card">
+                    <a href="racks.html" class="servico-card" aria-label="Ver produtos de Racks e Acessórios">
                         <div class="servico-img">
-                            <img src="images/racksacessorios.png" alt="Racks e Acessórios">
+                            <img src="images/racksacessorios.jpg" alt="Racks e Acessórios">
                         </div>
                         <h3>Racks e Acessórios</h3>
                         <ul>
@@ -266,7 +225,7 @@
         </section>
 
         <!-- Fabricantes -->
-        <section id="marcas" class="marcas">
+        <section id="marcas" class="marcas" aria-label="Seção com marcas fabricantes">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Fabricantes</h2>
@@ -373,6 +332,30 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="swiper-slide">
+                            <div class="marca-item">
+                                <div class="marca-logo">
+                                    <img src="images/wjmoreira.png" alt="WJ Moreira Logo">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="marca-item">
+                                <div class="marca-logo">
+                                    <img src="images/hellerman.png" alt="Hellerman Tyton Logo">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="marca-item">
+                                <div class="marca-logo">
+                                    <img src="images/planet.png" alt="Planet Logo">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -390,143 +373,20 @@
                 </div>
             </div>
         </section>
-
-        <!-- Contato 
-        <section id="contato" class="contato">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Entre em Contato</h2>
-                    <p class="section-subtitle">Estamos prontos para atender suas necessidades</p>
-                </div>
-
-                <div class="contato-content">
-                    <div class="contato-info">
-                        <h3 class="subtitle-contato">Informações de Contato</h3>
-
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Endereço</h4>
-                                <p>Av. Utinga, 1586 - Utinga<br>CEP: 09220-611 - Santo André - SP</p>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Telefones</h4>
-                                <p>(11) 4477-2277<br>(11) 94027-2784</p>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>E-mails</h4>
-                                <p>comercial@abclan.com.br<br>abclantelecom@gmail.com</p>
-                            </div>
-                        </div>
-
-                        <div class="info-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <h4>Horário de Funcionamento</h4>
-                                <p>Segunda a Sexta: 8h30 às 18h<br>Sábado e Domingo: Fechado</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contato-form">
-                        <h3>Envie uma Mensagem</h3>
-                        <form action="SEU EMAIL !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" method="POST">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Seu Nome" required>
-                            </div>
-
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
-                            </div>
-
-                            <div class="form-group">
-                                <input type="tel" id="telefone" name="telefone" placeholder="Seu Telefone" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                            </div>
-
-                            <div class="form-group select-wrapper">
-                                <select id="assunto" name="assunto" required>
-                                    <option value="" disabled selected hidden>Selecione sua opção</option>
-                                    <option value="cabeamento">Financeiro</option>
-                                    <option value="telecom">Dúvidas</option>
-                                    <option value="orcamento">Solicitação de Orçamento</option>
-                                    <option value="outros">Outros</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <textarea id="mensagem" name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        -->
-
-        <!-- Orçamento 
-        <section id="orcamento" class="orcamento">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Solicite um Orçamento</h2>
-                    <p class="section-subtitle">Receba uma proposta personalizada para seu projeto</p>
-                </div>
-
-                <div class="orcamento-form">
-                    <form id="budgetForm"> COLOCAR EMAIL !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" id="empresa" name="empresa" placeholder="Nome da Empresa" required>
-                            </div>
-
-                            <div class="form-group">
-                                <input type="text" id="responsavel" name="responsavel" placeholder="Nome do Responsável" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="email" id="emailOrcamento" name="email" placeholder="E-mail para Contato" required>
-                            </div>
-
-                            <div class="form-group">
-                                <input type="tel" id="telefoneOrcamento" name="telefone" placeholder="Telefone para Contato" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea id="descricaoProjeto" name="descricao" placeholder="Descreva seu projeto ou necessidade" rows="6" required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Solicitar Orçamento</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-        -->
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" aria-label="Rodapé do site com informações de contato e navegação">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <img src="images/abclanlogotransp.png" alt="ABCLAN - TELECOM & CFTV" class="logo-img-footer">
                     <p>Tecnologia de ponta para redes seguras e eficientes.</p>
                     <div class="footer-social">
-                        <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram">
+                        <a href="https://instagram.com/abclan_telecom_cftv" target="_blank" aria-label="Instagram da ABC LAN">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook">
+                        <a href="https://facebook.com/abclantelecomunicacoes" target="_blank" aria-label="Facebook da ABC LAN">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
@@ -551,7 +411,7 @@
                         <li><i class="fas fa-envelope"></i> comercial@abclan.com.br</li>
                         <li><i class="fas fa-envelope"></i> abclantelecom@gmail.com</li>
                         <li><i class="fas fa-map-marker-alt"></i><u>
-                            <a href="https://www.google.com/maps/place/Av.+Utinga,+1586+-+Utinga,+Santo+André+-+SP,+09220-611" target="_blank" rel="noopener"> Av. Utinga, 1586 - Utinga, Santo André - SP</u></a></li>
+                            <a href="https://www.google.com/maps/place/Av.+Utinga,+1586+-+Utinga,+Santo+André+-+SP,+09220-611" target="_blank" rel="noopener" aria-label="Ver localização da ABC LAN no Google Maps"> Av. Utinga, 1586 - Utinga, Santo André - SP</u></a></li>
                     </ul>
                 </div>
 
@@ -566,8 +426,9 @@
                 <div class="footer-bandeiras">
                         <img src="images/visa.png" alt="Visa" class="logo-visa">
                         <img src="images/mastercard.png" alt="MasterCard" class="logo-master">
-                        <img src="images/PIX.png" alt="Pix" class="logo-pix">
-                        <img src="images/BNDES.png" alt="BNDES" class="logo-bndes">
+                        <img src="images/pix.png" alt="Pix" class="logo-pix">
+                        <img src="images/bndes.png" alt="BNDES" class="logo-bndes">
+                        <img src="images/barcode.png" alt="Barcode" class="logo-barcode">
                 </div>
             </div>
 
@@ -578,13 +439,13 @@
     </footer>
 
     <!-- Whatsapp Botão -->
-    <div class="whatsapp-container">
+    <div class="whatsapp-container" aria-label="Botão de acesso ao WhatsApp">
         <a class="whatsapp-btn" id="whatsappToggle" aria-label="Abrir opções de WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <div class="whatsapp-menu" id="whatsappMenu">
-            <a href="https://wa.me/5511940272784" target="_blank">📞 Suporte</a>
-            <a href="https://wa.me/5511940752234" target="_blank">📞 Comercial</a>
+        <div class="whatsapp-menu" id="whatsappMenu" aria-label="Menu com contatos de suporte e comercial no WhatsApp">
+            <a href="https://wa.me/5511940272784" target="_blank" aria-label="Falar com Suporte via WhatsApp">📞 Suporte</a>
+            <a href="https://wa.me/5511940752234" target="_blank" aria-label="Falar com Comercial via WhatsApp">📞 Comercial</a>
         </div>
     </div>
 
