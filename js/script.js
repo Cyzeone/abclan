@@ -386,3 +386,31 @@ if (hamburguer && navMenu) {
         navMenu.classList.toggle('active');
     });
 }
+
+// --- Submenu toggle (mobile) ---
+document.addEventListener("DOMContentLoaded", function () {
+    const submenuToggles = document.querySelectorAll(".submenu-toggle");
+
+    submenuToggles.forEach(toggle => {
+        toggle.addEventListener("click", function () {
+            const parent = this.closest(".has-submenu");
+            parent.classList.toggle("open");
+        });
+
+        // Acessibilidade: permite abrir com Enter ou Espaço
+        toggle.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                this.click();
+            }
+        });
+    });
+});
+
+document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+        e.stopPropagation(); // impede de fechar menu por clique fora
+        e.preventDefault();  // evita comportamento padrão do link
+        this.parentElement.classList.toggle('open'); // alterna classe no <li>
+    });
+});

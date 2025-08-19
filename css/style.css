@@ -206,21 +206,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s ease;
 }
 
-.submenu-toggle-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.submenu-toggle {
-    font-size: 20px;
-    cursor: pointer;
-    color: #2d3748;
-    transition: transform 0.3s ease;
-    display: none;
-}
-
 /* Submenu escondido por padrão */
 .has-submenu .submenu {
     display: none;
@@ -2434,6 +2419,7 @@ a:focus {
         width: fit-content;     /* o container fica do tamanho das imagens */
   }
 }
+
 
 
 
