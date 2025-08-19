@@ -26,6 +26,7 @@ Este é o código-fonte do website institucional desenvolvido para a ABCLAN - Te
 ## 🚀 Organização do CSS e Responsividade:
 
 - CSS padronizado e organizado utilizando breakpoints personalizados:
+
     - De 300px até 1200px+, cobrindo toda a gama de dispositivos
 
 ## 🛠️ Tecnologias usadas:
@@ -77,6 +78,7 @@ This is the source code of the institutional website developed for ABCLAN - Tele
 ## 🚀 CSS Organization and Responsiveness:
 
 - Standardized and organized CSS using custom breakpoints:
+
     - From 300px to 1200px+, covering a full range of devices
 
 ## 🛠️ Technologies Used:
@@ -99,5 +101,3 @@ Visit the live site at:
 🔗 https://cyzeone.github.io/abclan/index.html
 
 This repository serves as a base for the development, updates, and continuous improvement of the website by the team and the client.
-
-teste
