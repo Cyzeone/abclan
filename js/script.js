@@ -6,6 +6,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const contactForm = document.getElementById('contactForm');
     const budgetForm = document.getElementById('budgetForm');
 
+    if (hamburguer && navMenu) {
+        hamburguer.addEventListener('click', () => {
+            hamburguer.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
+
     const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '';
 
     navLinks.forEach(link => {
@@ -33,11 +40,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
                 const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
                 window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-            }
-
-            if (hamburguer && navMenu) {
-                hamburguer.classList.remove('active');
-                navMenu.classList.remove('active');
             }
         });
     });
