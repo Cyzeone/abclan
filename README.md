@@ -1,4 +1,4 @@
-# Website Institucional - ABCLAN
+# Website Institucional - ABC LAN
 
 🌎 English version available below.
 
@@ -50,7 +50,7 @@ Acesse a página publicada em:
 
 ---
 
-# Institutional Website - ABCLAN
+# Institutional Website - ABC LAN
 
 This is the source code of the institutional website developed for ABCLAN - Telecom & CFTV. The site is fully responsive, lightweight, SEO-optimized, and offers clear and objective navigation on both desktop and mobile devices.
 
