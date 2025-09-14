@@ -62,10 +62,7 @@ if (isset($_POST["empresa"]) && isset($_POST["responsavel"])) {
     }
 
     $destinatarios = [
-        "arnaldo@abclan.com.br",
-        "denis@abclan.com.br",
-        "rogerio@abclan.com.br",
-        "cpagels@abclan.com.br"
+        "teste@abclan.com.br"
     ];
     $titulo_email = "Solicitação de Orçamento - ABC LAN";
 
@@ -100,15 +97,15 @@ if (isset($_POST["empresa"]) && isset($_POST["responsavel"])) {
     $assuntoMap = [
         "financeiro" => [
             "label" => "Financeiro",
-            "destinatarios" => ["alessandro@abclan.com.br"]
+            "destinatarios" => ["teste@abclan.com.br"]
         ],
         "duvidas" => [
             "label" => "Dúvidas",
-            "destinatarios" => ["comercial02@abclan.com.br"]
+            "destinatarios" => ["teste@abclan.com.br"]
         ],
         "outros" => [
             "label" => "Outros",
-            "destinatarios" => ["abclantelecom@gmail.com"]
+            "destinatarios" => ["teste@gmail.com"]
         ]
     ];
 
@@ -138,14 +135,14 @@ $mail = new PHPMailer(true);
 try {
     // Configurações do SMTP do cliente
     $mail->isSMTP();
-    $mail->Host       = 'mail.abclan.com.br'; 
+    $mail->Host       = 'smtp.zoho.com'; 
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'cpagels@abclan.com.br'; // email do cliente
-    $mail->Password   = 'SENHA_DO_EMAIL'; // senha do email ou app password
+    $mail->Username   = 'EMAIL'; // email do cliente
+    $mail->Password   = 'SENHA'; // senha do email ou app password
     $mail->SMTPSecure = 'tls';
     $mail->Port       = 587;
 
-    $mail->setFrom('cpagels@abclan.com.br', 'ABC LAN'); 
+    $mail->setFrom('REMETENTE', 'ABC LAN'); 
     $mail->addReplyTo($email);
 
     // Destinatários
@@ -154,7 +151,7 @@ try {
     }
 
     // BCC de controle
-    $mail->addBCC('formulario.abclan@gmail.com');
+    $mail->addBCC('MEU EMAIL');
 
     // Conteúdo do email
     $mail->Subject = $titulo_email;

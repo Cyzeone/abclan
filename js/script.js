@@ -221,5 +221,4 @@ document.addEventListener("DOMContentLoaded", function() {
             if(!toggle.contains(e.target) && !menu.contains(e.target)) menu.style.display='none';
         });
     }
-
 });

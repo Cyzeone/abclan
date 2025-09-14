@@ -40,17 +40,15 @@ Este é o código-fonte do website institucional desenvolvido para a ABCLAN - Te
 - PHPMailer para envio real de e-mails
 - Swiper.js para sliders/carrosséis responsivos e interativos
 - Font Awesome para ícones sociais e visuais
-- GitHub Pages para hospedagem gratuita do site
+- HostGator para hospedagem do site
 
 ## 📂 Como visualizar:
 
 Acesse a página publicada em:
 
-🔗 https://cyzeone.github.io/abclan/index.html
+🔗 [www.abclan.com.br](https://www.abclan.com.br/index.html)
 
 ---
-
-Este repositório serve como base para o desenvolvimento, atualizações e acompanhamento da evolução do site pela equipe e pelo cliente.
 
 # Institutional Website - ABCLAN
 
@@ -92,12 +90,11 @@ This is the source code of the institutional website developed for ABCLAN - Tele
 - PHPMailer for real email sending
 - Swiper.js for responsive and interactive sliders/carousels
 - Font Awesome for social and visual icons
-- GitHub Pages for free site hosting
+- HostGator for site hosting
 
 ## 📂 How to View:
 
 Visit the live site at:
 
-🔗 https://cyzeone.github.io/abclan/index.html
+🔗 [www.abclan.com.br](https://www.abclan.com.br/index.html)
 
-This repository serves as a base for the development, updates, and continuous improvement of the website by the team and the client.
