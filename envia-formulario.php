@@ -2,13 +2,19 @@
 session_start();
 header('Content-Type: application/json');
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     echo json_encode(['success' => false, 'message' => 'Acesso negado.']);
     exit;
 }
 
-// === RATE LIMIT SIMPLES ===
-// Limita para 1 envio a cada 30 segundos por IP
+// RATE LIMIT SIMPLES 
 $ip = $_SERVER['REMOTE_ADDR'];
 $now = time();
 $limit_seconds = 30;
@@ -18,27 +24,27 @@ if (isset($_SESSION['last_submit_time'][$ip]) && ($now - $_SESSION['last_submit_
     exit;
 }
 
-// Função para validar telefone brasileiro simples (somente números 10 ou 11 dígitos)
+// Funções de validação
 function validarTelefone($telefone) {
     return preg_match('/^\d{10,11}$/', $telefone);
 }
 
-// Função para validar email com filtro PHP
 function validarEmail($email) {
     return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
 }
 
-// Sanitização simples
 function sanitize($data) {
     return htmlspecialchars(trim($data));
 }
 
+
+// Determina tipo de formulário
 if (isset($_POST["empresa"]) && isset($_POST["responsavel"])) {
     // Formulário de Orçamento
     $empresa     = sanitize($_POST["empresa"]);
     $responsavel = sanitize($_POST["responsavel"]);
     $email       = sanitize($_POST["email"]);
-    $telefone    = preg_replace('/\D+/', '', $_POST["telefone"]); // remove tudo que não é dígito
+    $telefone    = preg_replace('/\D+/', '', $_POST["telefone"]);
     $descricao   = sanitize($_POST["descricao"]);
 
     // Validações
@@ -98,7 +104,7 @@ if (isset($_POST["empresa"]) && isset($_POST["responsavel"])) {
         ],
         "duvidas" => [
             "label" => "Dúvidas",
-            "destinatarios" => ["cpagels@abclan.com.br"]
+            "destinatarios" => ["comercial02@abclan.com.br"]
         ],
         "outros" => [
             "label" => "Outros",
@@ -125,24 +131,39 @@ if (isset($_POST["empresa"]) && isset($_POST["responsavel"])) {
     exit;
 }
 
-// Cabeçalhos do email
-$headers = "From: $email\r\n";
-$headers .= "Reply-To: $email\r\n";
 
-// Enviar BCC para controle (substitua pelo seu email real)
-$bccEmail = "formulario.abclan@gmail.com";
-$headers .= "Bcc: $bccEmail\r\n";
+// Configuração PHPMailer
+$mail = new PHPMailer(true);
 
-// Envio do email
-$enviado = true;
-foreach ($destinatarios as $para) {
-    if (!mail($para, $titulo_email, $corpo, $headers)) {
-        $enviado = false;
+try {
+    // Configurações do SMTP do cliente
+    $mail->isSMTP();
+    $mail->Host       = 'mail.abclan.com.br'; 
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'cpagels@abclan.com.br'; // email do cliente
+    $mail->Password   = 'SENHA_DO_EMAIL'; // senha do email ou app password
+    $mail->SMTPSecure = 'tls';
+    $mail->Port       = 587;
+
+    $mail->setFrom('cpagels@abclan.com.br', 'ABC LAN'); 
+    $mail->addReplyTo($email);
+
+    // Destinatários
+    foreach ($destinatarios as $dest) {
+        $mail->addAddress($dest);
     }
-}
 
-// Se envio foi bem sucedido, atualiza tempo para rate limit
-if ($enviado) {
+    // BCC de controle
+    $mail->addBCC('formulario.abclan@gmail.com');
+
+    // Conteúdo do email
+    $mail->Subject = $titulo_email;
+    $mail->Body    = $corpo;
+
+    // Envia email
+    $mail->send();
+
+    // Atualiza rate limit
     $_SESSION['last_submit_time'][$ip] = $now;
 
     // Grava log simples
@@ -150,6 +171,7 @@ if ($enviado) {
     file_put_contents('envios.log', $logEntry, FILE_APPEND | LOCK_EX);
 
     echo json_encode(['success' => true, 'message' => 'Formulário enviado com sucesso.']);
-} else {
-    echo json_encode(['success' => false, 'message' => 'Erro ao enviar a mensagem. Tente novamente.']);
+
+} catch (Exception $e) {
+    echo json_encode(['success' => false, 'message' => 'Erro ao enviar a mensagem: ' . $mail->ErrorInfo]);
 }

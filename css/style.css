@@ -10,11 +10,11 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
     height: 100%;
-    overflow-y: scroll; /* sempre mostra a barra */
+    overflow-y: scroll; 
 }
 
 body {
-    min-height: 100vh; /* <-- ESSENCIAL para empurrar o footer */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     font-family: 'Open Sans', sans-serif;
@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1000;
     background: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    overflow-anchor: none; /* <- ESSA LINHA AJUSTA O PROBLEMA DA SCROLLBAR NO CHROME */
+    overflow-anchor: none; 
 }
 
 .header-top {
@@ -120,10 +120,8 @@ h1, h2, h3, h4, h5, h6 {
     outline: none !important;
 }
 
-
-/* Logotipo com imagem */
 .logo-img {
-    max-height: 50px; /* ajuste conforme o tamanho visual ideal */
+    max-height: 50px; 
     height: auto;
     width: auto;
     display: block;
@@ -206,7 +204,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s ease;
 }
 
-/* Submenu escondido por padrão */
 .has-submenu .submenu {
     display: none;
     flex-direction: column;
@@ -225,8 +222,6 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(180deg);
 }
 
-
-/* Esconde o submenu por padrão */
 .nav-menu .submenu {
     display: none;
     position: absolute;
@@ -260,12 +255,11 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
 }
 
-/* Mostra o submenu ao passar o mouse no pai */
+/* Mostra o submenu ao passar o mouse */
 .nav-menu li.has-submenu:hover > .submenu {
     display: block;
 }
 
-/* Para o posicionamento correto do submenu, o pai deve ser relativo */
 .nav-menu li.has-submenu {
     position: relative;
 }
@@ -397,7 +391,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     box-sizing: border-box;
     padding: 0;
-    position: absolute; /* importante para aparecer */
+    position: absolute; 
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
@@ -412,13 +406,11 @@ h1, h2, h3, h4, h5, h6 {
     right: 10px; /* Ajuste a distância da direita */
 }
 
-/* Remover ícone padrão do Swiper */
 .swiper-button-prev::after,
 .swiper-button-next::after {
     display: none;
 }
 
-/* Estilo do SVG (seta) dentro do botão */
 .swiper-button-prev svg,
 .swiper-button-next svg {
     width: 16px;
@@ -453,7 +445,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(26, 54, 93, 0.4); /* Ajuste conforme o quanto quer escurecer */
+    background: rgba(26, 54, 93, 0.4); 
 }
 
 /* Conteúdo */
@@ -729,7 +721,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-
 /* Marcas */
 .marcas {
     padding: 100px 0;
@@ -851,10 +842,9 @@ h1, h2, h3, h4, h5, h6 {
     pointer-events: none;
 }
 
-
 /* Contêiner das setas para posicionar */
 .marcas-swiper {
-    position: relative; /* importante pra posicionar as setas dentro dela */
+    position: relative; 
 }
 
 /* Contato */
@@ -874,13 +864,11 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    /* Ajuste para alinhar o topo dos dois blocos */
     align-items: start; 
 }
 
 .contato-info {
-    /* Adiciona padding-left para mover o conteúdo para a direita */
-    padding-left: 20px; /* Ajuste este valor conforme a necessidade */
+    padding-left: 20px; 
 }
 
 .subtitle-contato {
@@ -894,7 +882,7 @@ h1, h2, h3, h4, h5, h6 {
 .contato-info h3 {
     font-size: 1.8rem;
     color: #1a365d;
-    margin-bottom: 40px; /* Espaçamento aumentado para o endereço */
+    margin-bottom: 40px; 
 }
 
 .info-item {
@@ -930,7 +918,6 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 800px;
     padding: 40px;
     border-radius: 15px;
-    /* Remove o margin-top para alinhar com o topo do .contato-info */
     margin-top: 0; 
     background: #fff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -945,7 +932,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .contato-form button {
     display: block;
-    margin: 30px auto 0 auto; /* margem opcional no topo, centraliza no eixo X */
+    margin: 30px auto 0 auto; 
 }
 
 /* Orçamento */
@@ -1096,12 +1083,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .orcamento-form button {
     display: block;
-    margin: 30px auto 0 auto; /* margem opcional no topo, centraliza no eixo X */
+    margin: 30px auto 0 auto; 
 }
 
-
 /* WhatsApp Button */
-/* CONTÊINER FIXO */
 .whatsapp-container {
     position: fixed;
     bottom: 30px;
@@ -1180,7 +1165,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-bandeiras img {
     object-fit: contain;
     transition: transform 0.3s ease;
-    filter: brightness(0) invert(1); /* <- Torna a imagem branca */
+    filter: brightness(0) invert(1); /* imagem branca */
 }
 
 /* Ajustes por logo */
@@ -1212,21 +1197,18 @@ h1, h2, h3, h4, h5, h6 {
     background: #f1f1f1;
 }
 
-/* Container precisa ser position: relative */
 .select-wrapper {
     position: relative;
     width: 100%;
     max-width: 100%;
 }
 
-/* Choices base */
 .select-wrapper .choices {
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box;
 }
 
-/* Estilo do dropdown */
 .select-wrapper .choices__list--dropdown {
     position: absolute !important;
     left: 0 !important;
@@ -1239,7 +1221,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Código das demais telas */
-
 .produtos {
     padding: 80px 0;
     background: #f7fafc;
@@ -1294,8 +1275,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #4a5568;
     font-size: 1rem;
 }
-
-/* CSS dos botões "Ler mais" em produtos*/
 
 .produto-item {
     display: flex;
@@ -1378,7 +1357,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* CSS do Zoom nas imagens */
-
 .produto-img {
     position: relative;
     cursor: zoom-in;
@@ -1386,7 +1364,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .produto-img img {
-    width: 200px; /* Ou ajuste o tamanho que quiser */
+    width: 200px; 
     height: auto;
     object-fit: contain;
     display: block;
@@ -1394,7 +1372,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .produto-img::after {
-    content: "\1F50D"; /* Emoji de lupa, substituível por SVG se quiser */
+    content: "\1F50D"; 
     position: absolute;
     top: 8px;
     right: 8px;
@@ -1433,7 +1411,6 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: contain;
 }
 
-
 .close-modal {
     position: absolute;
     top: 20px;
@@ -1444,7 +1421,6 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
-/* Garante que todos os containers respeitem a largura da tela */
 .container {
     max-width: 100%;
     width: 100%;
@@ -1489,7 +1465,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* CSS Outline */
-
 a:focus {
     outline: none !important;
 }
@@ -2071,7 +2046,7 @@ a:focus {
     .contato-form {
         max-width: 100%;
         padding: 30px 10px; /* margem interna bem pequena nas laterais */
-        margin: 0 1.1.5px; /* opcional: uma leve margem externa pra não colar 100% */
+        margin: 0 1.1.5px; 
         border-radius: 12px;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     }
@@ -2247,7 +2222,7 @@ a:focus {
     }
 
     .site-wrapper {
-        padding-bottom: 120px; /* Ajuste conforme a altura real do footer */
+        padding-bottom: 120px; 
     }
 
     .whatsapp-btn {
@@ -2317,7 +2292,7 @@ a:focus {
     }
 
     .site-wrapper {
-        padding-bottom: 120px; /* Ajuste conforme a altura real do footer */
+        padding-bottom: 120px; 
     }
 
     .whatsapp-btn {
